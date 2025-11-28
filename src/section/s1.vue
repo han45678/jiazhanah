@@ -19,79 +19,103 @@
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
-@keyframes op {
-  50% {
-    opacity: 0;
-  }
-}
-
-@keyframes an {
-  to {
-    transform: translateX(0%);
-  }
-}
-
 .s1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: sizem(605);
+  height: 100dvh;
   background: url("./s1/bgm.webp") center;
   background-size: cover;
   position: relative;
 
   @media screen and (min-width: 768px) {
     background-image: url("./s1/bg.webp");
-    height: 100vh;
-    max-height: size(1080);
-    min-height: size(900);
+    height: 100dvh;
     font-size: size(47);
   }
 
   .txt {
     position: absolute;
-    
+    padding-right: sizem(160);
+    top: sizem(90);
+
     @media screen and (min-width: 768px) {
+      padding-right: 0;
       top: size(150);
       left: 50%;
       transform: translateX(-50%);
       margin: auto;
     }
 
-    img{
+    img {
       display: block;
-      &.t1{
-        margin-top: 125px;
+      max-width: 100%;
+
+      &.logo {
+        width: sizem(140);
+
+        @media screen and (min-width: 768px) {
+          width: size(300);
+        }
       }
-      &.t2{
-        margin-top: 45px;
+
+      &.t1 {
+        margin-top: sizem(115);
+        width: sizem(165);
+
+        @media screen and (min-width: 768px) {
+          margin-top: size(160);
+          width: size(365);
+        }
       }
-      &.t3{
-        margin-top: 85px;
+
+      &.t2 {
+        margin-top: sizem(20);
+        width: sizem(100);
+
+        @media screen and (min-width: 768px) {
+          margin-top: size(43);
+          width: size(215);
+        }
+      }
+
+      &.t3 {
+        margin-top: sizem(95);
+        width: sizem(55);
+
+        @media screen and (min-width: 768px) {
+          margin-top: size(115);
+          width: size(125);
+        }
       }
     }
   }
 
-  .right{
+  .right {
     height: 100%;
     position: absolute;
     right: 0;
     top: 0;
-    .bg{
+
+    .bg {
       width: auto;
       height: 100%;
     }
-    .bird{
+
+    .bird {
       width: 100%;
       position: absolute;
-    
+      width: sizem(120);
+      top: sizem(225);
+      right: 18%;
+
       @media screen and (min-width: 768px) {
         width: size(240);
         top: size(360);
-        right: size(130);
       }
-      img{
+
+      img {
         width: 100%;
       }
     }
@@ -100,16 +124,3 @@
 
 }
 </style>
-<script setup>
-import { computed, getCurrentInstance, ref, inject } from 'vue';
-const globals = getCurrentInstance().appContext.config.globalProperties;
-
-const isMobile = computed(() => globals.$isMobile());
-
-const smoothScroll = inject('smoothScroll')
-const scrollTo = (el) => {
-  smoothScroll({
-    scrollTo: document.querySelector(el)
-  })
-}
-</script>

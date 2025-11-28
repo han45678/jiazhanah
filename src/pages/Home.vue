@@ -10,7 +10,7 @@
   </div>
   <!--loading end-->
   <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#FFF] text-[#000]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#e6e6e6] text-[#000]">
     <S1 />
     <S2 />
     <S3 />
@@ -58,7 +58,7 @@
 }
 
 .home {
-  background: linear-gradient(to bottom, #009e41 0%, #00a6e9 100%);
+  // background: linear-gradient(to bottom, #009e41 0%, #00a6e9 100%);
 
   &::before {
     content: "";

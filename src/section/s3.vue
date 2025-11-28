@@ -1,18 +1,16 @@
 <template>
   <article class="s3">
-    <img src="./s3/enm.svg" class="en" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
-    <img src="./s3/en.svg" class="en" data-aos="zoom-in" data-aos-delay="0" v-else>
+    <!-- <img src="./s3/enm.svg" class="en" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
+    <img src="./s3/en.svg" class="en" data-aos="zoom-in" data-aos-delay="0" v-else> -->
 
     <div class="txt font-['Noto_Serif_TC',serif]">
-      <span data-aos="zoom-in" data-aos-delay="0">在雙北市中心，匯聚新天地</span>
-      <span data-aos="zoom-in" data-aos-delay="100">城市中有河岸、繁華中有綠意</span>
-      <span data-aos="zoom-in" data-aos-delay="200">對坐北士科輝達AI科技大未來</span>
-      <span data-aos="zoom-in" data-aos-delay="300">雙捷三重A2站，不再只是地理座標</span>
-      <span data-aos="zoom-in" data-aos-delay="400">而是國際科技菁英行旅世界的指標</span><br>
-      <span data-aos="zoom-in" data-aos-delay="500">從三重登場，到世界嚮往</span>
-      <span data-aos="zoom-in" data-aos-delay="600">人生制高點，未來從此耀眼</span>
+      <h2>安南匯聚四大園區</h2>
+      <img class="line" src="./s3/line.svg" alt="line">
+      <p>
+        台南科技工業區、和順工業區、新吉工業區、總頭寮工業區，攜手南科全球半導體聚落共榮，領航台南經濟命脈。重大建設推動城市升級，繁榮新景持續擴展，坐享宜居優勢，未來增值無限。
+      </p>
     </div>
-    <div class="viewbox">
+    <div class="_viewbox">
       <fullview />
     </div>
   </article>
@@ -22,77 +20,89 @@
 @import "@/assets/style/function.scss";
 
 .s3 {
-  @apply w-full relative;
-  height: size(1081);
-  padding-top: size(185);
+  display: flex;
 
-
-
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    gap: size(285);
+    padding: size(165);
+  }
 
   .txt {
-    position: absolute;
-    top: size(80);
-    left: size(1150);
-    line-height: 2;
-    text-align: left;
-    font-size: size(20);
-    font-weight: 500;
-    z-index: 99;
-    color: #fff;
+    padding: sizem(70) sizem(40);
 
-    span {
-      display: block;
+    @media screen and (min-width: 768px) {
+      padding-right: size(15);
+      width: size(345);
+      order: 2;
     }
 
-  }
+    h2 {
+      position: relative;
 
-  .en {
-    position: absolute;
-    width: size(643);
-    top: size(150);
-    left: size(380);
-    z-index: 99;
-  }
+      &::before {
+        content: '';
+        background-image: url(./s3/title_line_m.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: left center;
+        width: 100%;
+        height: 100%;
 
-  .viewbox {
-    @apply w-full h-full absolute z-0;
-    @apply left-0 top-0;
-  }
-}
+        @media screen and (min-width: 768px) {
+          background-image: url(./s3/title_line.svg);
+        }
 
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
 
-@media screen and (max-width: 767px) {
-  .s3 {
-    @apply w-full relative;
-    height: sizem(800);
+      font-size: sizem(20);
+      padding-top: sizem(45);
+      padding-left: sizem(10);
 
-    .txt {
-      position: absolute;
-      top: sizem(30);
-      left: 0;
-      right: 0;
-      text-align: center;
-      line-height: 1.8;
-      letter-spacing: 0.06em;
-      color: #fff;
-      font-size: sizem(14);
-      font-weight: 500;
-
-      span {
-        display: block;
+      @media screen and (min-width: 768px) {
+        padding-top: size(175);
+        padding-left: size(30);
+        font-size: size(36);
+        margin-bottom: size(20);
       }
     }
 
-    .en {
-      width: sizem(200);
-      top: sizem(250);
-      left: sizem(90);
+    .line {
+      display: block;
+      margin-left: sizem(60);
+      margin-right: auto;
+      width: sizem(48);
+      margin-top: sizem(10);
+      margin-bottom: sizem(10);
+
+      @media screen and (min-width: 768px) {
+        margin-left: auto;
+        width: size(140);
+        margin-bottom: size(20);
+      }
     }
 
+    p {
+      line-height: 1.8;
+      font-size: sizem(12);
+      padding-left: sizem(10);
+      padding-right: sizem(10);
+      @media screen and (min-width: 768px) {
+        font-size: size(18);
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
 
+  ._viewbox {
+    @media screen and (min-width: 768px) {
+      width: size(900);
+      order: 1;
+    }
   }
 }
 </style>
