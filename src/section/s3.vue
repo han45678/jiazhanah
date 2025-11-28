@@ -2,7 +2,7 @@
   <article class="s3">
     <img src="./s3/enm.svg" class="en" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
     <img src="./s3/en.svg" class="en" data-aos="zoom-in" data-aos-delay="0" v-else>
-    
+
     <div class="txt font-['Noto_Serif_TC',serif]">
       <span data-aos="zoom-in" data-aos-delay="0">在雙北市中心，匯聚新天地</span>
       <span data-aos="zoom-in" data-aos-delay="100">城市中有河岸、繁華中有綠意</span>
@@ -11,7 +11,7 @@
       <span data-aos="zoom-in" data-aos-delay="400">而是國際科技菁英行旅世界的指標</span><br>
       <span data-aos="zoom-in" data-aos-delay="500">從三重登場，到世界嚮往</span>
       <span data-aos="zoom-in" data-aos-delay="600">人生制高點，未來從此耀眼</span>
-</div>
+    </div>
     <div class="viewbox">
       <fullview />
     </div>
@@ -20,6 +20,7 @@
 
 <style lang="scss" scoped>
 @import "@/assets/style/function.scss";
+
 .s3 {
   @apply w-full relative;
   height: size(1081);
@@ -28,21 +29,24 @@
 
 
 
-  .txt{
+  .txt {
     position: absolute;
     top: size(80);
     left: size(1150);
     line-height: 2;
     text-align: left;
-    font-size:size(20);
+    font-size: size(20);
     font-weight: 500;
     z-index: 99;
     color: #fff;
 
-    span{display: block;}
+    span {
+      display: block;
+    }
 
   }
-  .en{
+
+  .en {
     position: absolute;
     width: size(643);
     top: size(150);
@@ -58,32 +62,37 @@
 
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
   .s3 {
     @apply w-full relative;
     height: sizem(800);
 
-  .txt{
-    position: absolute;
-    top: sizem(30);left: 0;right: 0;text-align: center;
-    line-height: 1.8;
-    letter-spacing: 0.06em;
-    color: #fff;
-    font-size:sizem(14);
-    font-weight: 500;
-    span{display: block;}
-  }
+    .txt {
+      position: absolute;
+      top: sizem(30);
+      left: 0;
+      right: 0;
+      text-align: center;
+      line-height: 1.8;
+      letter-spacing: 0.06em;
+      color: #fff;
+      font-size: sizem(14);
+      font-weight: 500;
 
-  .en{
-    width: sizem(200);
-    top: sizem(250);
-    left: sizem(90);
-  }
+      span {
+        display: block;
+      }
+    }
 
-  
+    .en {
+      width: sizem(200);
+      top: sizem(250);
+      left: sizem(90);
+    }
+
+
   }
 }
 </style>
