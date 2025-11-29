@@ -11,7 +11,7 @@
       </p>
     </div>
     <div class="_viewbox">
-      <fullview />
+      <fullview v-if="0" />
     </div>
   </article>
 </template>
@@ -30,9 +30,11 @@
 
   .txt {
     padding: sizem(70) sizem(40);
+    width: 100%;
+    box-sizing: border-box;
 
     @media screen and (min-width: 768px) {
-      padding-right: size(15);
+      padding: 0 0 0 size(15);
       width: size(345);
       order: 2;
     }
@@ -90,6 +92,7 @@
       font-size: sizem(12);
       padding-left: sizem(10);
       padding-right: sizem(10);
+
       @media screen and (min-width: 768px) {
         font-size: size(18);
         padding-left: 0;

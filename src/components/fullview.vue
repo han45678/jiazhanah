@@ -1,8 +1,8 @@
 <template>
     <div class="viewbox" ref="viewbox">
-        <!-- <img ref="viewImg" src="@/section/s3/txt.svg" alt="" srcset=""> -->
+        <img ref="viewImg" src="@/section/s3/map.jpg" alt="" srcset="">
         <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
-            <img src="@/components/fullview/finger.png" alt="" srcset="">
+            <img src="./s3/line.svg" alt="" srcset="">
         </div>
     </div>
 </template>
@@ -16,11 +16,9 @@
     height: 100%;
     background: #eee;
 
-    > img {
+    img {
         height: 100%;
         max-width: unset;
-        background:url("@/section/s3/map.webp") 50%;
-        background-size: 100% auto;
     }
 
 }
@@ -40,14 +38,14 @@
             height: 100%;
             left: 0;
             top: 0;
-            z-index: 3;
+            z-index: 10;
             display: flex;
             justify-content: center;
             align-items: center;
             pointer-events: none;
             opacity: 1;
             transition: all 1s;
-            background-color: rgba($color: #008DD5, $alpha: 0.5);
+            background-color: rgba($color: #000000, $alpha: 0.5);
 
             img {
                 height: 47px;
@@ -61,38 +59,39 @@
 }
 </style>
 <script setup>
-import BScroll from '@better-scroll/core';
-import { onMounted, ref, computed, getCurrentInstance } from 'vue';
+import BScroll from '@better-scroll/core'
+import { onMounted, ref } from 'vue';
 
-const viewbox = ref();
-const viewImg = ref();
-const swiped = ref(false);
-const offsetRatio = 1.67; 
+const viewbox = ref()
+const viewImg = ref()
+const swiped = ref(false)
+const offsetRatio = 2.85; //調整此值設定X軸位置偏移參數
 
-const globals = getCurrentInstance().appContext.config.globalProperties;
-const isMobile = computed(() => globals.$isMobile());
 
 onMounted(() => {
-  // viewImg.value.addEventListener('load', () => {
-    // if (isMobile.value) {
-      // let scroll = new BScroll(viewbox.value, {
-      //   probeType: 2,
-      //   scrollX: true,
-      //   scrollY: true,
-      //   disableTouch: false,
-      //   disableMouse: false,
-      //   bindToWrapper: true,
-      //   eventPassthrough: "vertical",
-      //   bounce: false,
-      // });
+    viewImg.value.addEventListener('load', () => {
 
-      // scroll.scrollTo(scroll.maxScrollX / offsetRatio, 500);
-      // setTimeout(() => {
-      //   scroll.on("scroll", () => {
-      //     swiped.value = true;
-      //   });
-      // }, 1000);
-    // }
-  // });
-});
+        let scroll = new BScroll(viewbox.value, {
+            probeType: 2,
+            scrollX: true,
+            scrollY: true,
+            disableTouch: false,
+            disableMouse: false,
+            bindToWrapper: true,
+            eventPassthrough: "vertical",
+            bounce: false,
+        })
+
+        scroll.scrollTo(scroll.maxScrollX / offsetRatio, 500);
+        setTimeout(() => {
+            scroll.on("scroll", () => {
+                swiped.value = true
+            });
+        }, 1000);
+    })
+
+
+})
+
+
 </script>
