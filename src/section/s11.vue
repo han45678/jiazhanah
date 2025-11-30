@@ -1,28 +1,36 @@
 <template>
-  <article class="s3">
+  <article class="s11">
     <div class="txt font-['Noto_Serif_TC',serif]">
-      <h2>安南匯聚四大園區</h2>
+      <h2>安適生活 繁華3大商圈</h2>
       <img class="line" src="./s3/line.svg" alt="line">
       <p>
-        台南科技工業區、和順工業區、新吉工業區、總頭寮工業區，攜手南科全球半導體聚落共榮，領航台南經濟命脈。重大建設推動城市升級，繁榮新景持續擴展，坐享宜居優勢，未來增值無限。
+        安和路黃金機能圈，吃喝玩樂全包辦。輕車可達和順、安和路、北安路3大商圈，日常所需盡善盡美。連鎖超市、完善學區、醫療院所通通有，便利生活輕鬆享。
       </p>
     </div>
-    <div class="_viewbox">
-      <fullview  />
+    <div class="pic">
+      <div>
+        <img src="./s11/pic01.png" alt="pic">
+      </div>
+      <div>
+        <img src="./s11/pic02.png" alt="pic">
+      </div>
     </div>
+
   </article>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s3 {
+.s11 {
   display: flex;
-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-image: url(./s7/bg.png);
+
   @media screen and (min-width: 768px) {
     justify-content: center;
-    gap: size(285);
-    padding: size(165);
+    gap: size(90);
+    padding: size(165) 0 0 size(165);
   }
 
   .txt {
@@ -32,8 +40,8 @@ flex-wrap: wrap;
 
     @media screen and (min-width: 768px) {
       padding: 0 0 0 size(15);
-      width: size(345);
-      order: 2;
+      width: size(420);
+      // order: 2;
     }
 
     h2 {
@@ -41,7 +49,7 @@ flex-wrap: wrap;
 
       &::before {
         content: '';
-        background-image: url(./s3/title_line_m.svg);
+        background-image: url(./s7/title_line_m.svg);
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: left center;
@@ -49,7 +57,7 @@ flex-wrap: wrap;
         height: 100%;
 
         @media screen and (min-width: 768px) {
-          background-image: url(./s3/title_line.svg);
+          background-image: url(./s7/title_line.svg);
         }
 
         position: absolute;
@@ -99,20 +107,36 @@ flex-wrap: wrap;
     }
   }
 
-  ._viewbox {
-    overflow: hidden;
-    width: 100%;
+  .pic {
+    position: relative;
+    overflow: visible;
+    width: calc(100% - sizem(80));
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: sizem(40);
+    display: flex;
+
+
     @media screen and (min-width: 768px) {
-      width: size(900);
-      order: 1;
+      width: size(1165);
+      margin-bottom: 0
+    }
+
+  }
+
+  .caption {
+    color: #fff;
+    font-weight: 600;
+    font-size: sizem(10);
+    bottom: sizem(10);
+    right: sizem(10);
+    position: absolute;
+
+    @media screen and (min-width: 768px) {
+      font-size: size(16);
+      bottom: size(10);
+      right: size(10);
     }
   }
 }
 </style>
-
-<script setup>
-import fullview from "@/components/fullview.vue"
-import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
-const globals = getCurrentInstance().appContext.config.globalProperties
-const isMobile = computed(() => globals.$isMobile())
-</script>

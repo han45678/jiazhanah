@@ -2,7 +2,7 @@
     <div class="viewbox" ref="viewbox">
         <img ref="viewImg" src="@/section/s3/map.jpg" alt="" srcset="">
         <div class="mask" :class="{ hide: swiped }">
-            <img src="./s3/line.svg" alt="" srcset="">
+            <img src="@/components/fullview/finger.png" alt="" srcset="">
         </div>
     </div>
 </template>

@@ -1,22 +1,24 @@
 <template>
   <article class="s5">
-    <img class="bg hidden md:block" src="./s5/bg.webp" alt="bg">
-    <img class="bg block md:hidden" src="./s5/bg_m.webp" alt="bg">
+    <img class="bg hidden md:block" src="./s9/bg.jpg" alt="bg">
+    <img class="bg block md:hidden" src="./s9/bgm.jpg" alt="bg">
     <div class="win">
-      <img class="win_bg hidden md:block" src="./s5/bg.webp" alt="bg">
-      <img class="win_bg block md:hidden" src="./s5/bg_m.webp" alt="bg">
+      <img class="win_bg hidden md:block" src="./s9/bg.jpg" alt="bg">
+      <img class="win_bg block md:hidden" src="./s9/bgm.jpg" alt="bg">
       <div class="text">
         <h2 class="font-['Noto_Serif_TC',serif]">
           安<br>
-          心<br>
-          <img src="./s5/line.svg" alt="bg" ><br>
+          然<br>
+          成<br>
+          家<br>
+          <img src="./s9/line.svg" alt="bg"><br>
+          實<br>現<br>夢<br>享<br>
           生<br>
           活
         </h2>
         <p class="font-['Noto_Serif_TC',serif]">
-          和幸福溫柔相約<br>
-          當繁華遇見寧靜，關於未來的美好故事，<br class="hidden md:block">
-          倚著安和路展開
+          通勤直抵南科，下樓全聯為鄰，雙語學區<br>
+          好境，日系藝文公設，心之所嚮應有盡有。
         </p>
       </div>
     </div>
@@ -30,13 +32,15 @@
 .s5 {
   position: relative;
   overflow: hidden;
+
   .bg {
     width: 100dvw;
     aspect-ratio: 9/16;
     filter: blur(5px);
+
     @media screen and (min-width: 768px) {
-        aspect-ratio: 16/9;
-      }
+      aspect-ratio: 16/9;
+    }
   }
 
   .win {
@@ -48,6 +52,7 @@
     transform: translate(-50%, -50%);
     border: 1px solid #fff;
     overflow: hidden;
+
     @media screen and (min-width: 768px) {
       width: calc(100% - size(180));
       height: calc(100% - size(220));
@@ -68,36 +73,42 @@
       align-content: center;
       text-align: center;
       color: #fff;
-      h2{
+
+      h2 {
         width: 100%;
         text-align: center;
         font-size: sizem(32);
         font-weight: 600;
         line-height: 1;
         padding-bottom: sizem(25);
+
         @media screen and (min-width: 768px) {
-          font-size: size(60);
+          font-size: size(50);
           padding-bottom: size(50);
         }
-        img{
+
+        img {
           width: sizem(12);
           height: sizem(58);
-          padding-top: sizem(5);
-          padding-bottom: sizem(5);
+          margin-top: sizem(5);
+          margin-bottom: sizem(5);
+
           @media screen and (min-width: 768px) {
-            width: size(24);
-            height: size(110);
-            padding-top: size(10);
-            padding-bottom: size(7.5);
+            width: size(30);
+            height: size(44);
+            margin-top: size(10);
+            margin-bottom: size(7.5);
           }
         }
       }
-      p{
+
+      p {
         font-weight: 600;
         line-height: 1.4;
         width: sizem(260);
         font-size: sizem(12);
         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.40);
+
         @media screen and (min-width: 768px) {
           width: size(645);
           font-size: size(26);
@@ -112,25 +123,26 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+
       @media screen and (min-width: 768px) {
         aspect-ratio: 16/9;
       }
     }
   }
 
-    .caption {
+  .caption{
     color: #fff;
     font-weight: 600;
     font-size: sizem(10);
     bottom: sizem(10);
     right: sizem(10);
     position: absolute;
-
     @media screen and (min-width: 768px) {
       font-size: size(16);
       bottom: size(10);
-      right: size(10);
+      right: size(10 );
     }
   }
+
 }
 </style>

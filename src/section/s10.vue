@@ -1,27 +1,29 @@
 <template>
-  <article class="s3">
+  <article class="s10">
     <div class="txt font-['Noto_Serif_TC',serif]">
-      <h2>安南匯聚四大園區</h2>
+      <h2>安享品味 嚴選國際建材</h2>
       <img class="line" src="./s3/line.svg" alt="line">
       <p>
-        台南科技工業區、和順工業區、新吉工業區、總頭寮工業區，攜手南科全球半導體聚落共榮，領航台南經濟命脈。重大建設推動城市升級，繁榮新景持續擴展，坐享宜居優勢，未來增值無限。
+        佳展建設精心打造十年里程碑代表作，精挑細選頂尖建材與配備，以精品工藝，開啟品味質感的每一天。
       </p>
     </div>
-    <div class="_viewbox">
-      <fullview  />
+    <div class="pic">
+      <img src="./s10/pic.jpg" alt="pic" />
     </div>
   </article>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s3 {
+.s10 {
   display: flex;
-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-color: #E6E6E6;
+
   @media screen and (min-width: 768px) {
     justify-content: center;
-    gap: size(285);
+    gap: size(200);
     padding: size(165);
   }
 
@@ -32,7 +34,7 @@ flex-wrap: wrap;
 
     @media screen and (min-width: 768px) {
       padding: 0 0 0 size(15);
-      width: size(345);
+      width: size(450);
       order: 2;
     }
 
@@ -42,7 +44,7 @@ flex-wrap: wrap;
       &::before {
         content: '';
         background-image: url(./s3/title_line_m.svg);
-        background-size: 100%;
+        background-size: sizem(290);
         background-repeat: no-repeat;
         background-position: left center;
         width: 100%;
@@ -50,6 +52,7 @@ flex-wrap: wrap;
 
         @media screen and (min-width: 768px) {
           background-image: url(./s3/title_line.svg);
+          background-size: size(400);
         }
 
         position: absolute;
@@ -62,7 +65,7 @@ flex-wrap: wrap;
       padding-left: sizem(10);
 
       @media screen and (min-width: 768px) {
-        padding-top: size(175);
+        padding-top: size(225);
         padding-left: size(30);
         font-size: size(36);
         margin-bottom: size(20);
@@ -99,20 +102,25 @@ flex-wrap: wrap;
     }
   }
 
-  ._viewbox {
-    overflow: hidden;
-    width: 100%;
+  .pic {
+    position: relative;
+    overflow: visible;
+    width: calc(100% - sizem(80));
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: sizem(40);
+
+
     @media screen and (min-width: 768px) {
-      width: size(900);
+      width: size(725);
       order: 1;
+      margin-bottom: 0
     }
+
+    img {
+      width: 100%;
+    }
+
   }
 }
 </style>
-
-<script setup>
-import fullview from "@/components/fullview.vue"
-import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
-const globals = getCurrentInstance().appContext.config.globalProperties
-const isMobile = computed(() => globals.$isMobile())
-</script>

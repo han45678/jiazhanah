@@ -8,12 +8,12 @@ import 'swiper/css/pagination'
 </script>
 
 <template>
-  <article class="s6">
+  <article class="s7">
     <div class="txt font-['Noto_Serif_TC',serif]">
-      <h2>安享便捷 5分鐘北外環道</h2>
+      <h2>安適生活 繁華3大商圈</h2>
       <img class="line" src="./s3/line.svg" alt="line">
       <p>
-        安和路寬達24米，交通四通八達，駕車約5分鐘即可瞬接北外環，速抵南科、國道1號、國道8號，通勤移動效率滿分，南北奔馳更快意。
+        安和路黃金機能圈，吃喝玩樂全包辦。輕車可達和順、安和路、北安路3大商圈，日常所需盡善盡美。連鎖超市、完善學區、醫療院所通通有，便利生活輕鬆享。
       </p>
     </div>
     <div class="pic">
@@ -40,11 +40,15 @@ import 'swiper/css/pagination'
         :navigation="{ nextEl: '.custom-next', prevEl: '.custom-prev' }"
         :pagination="{ el: '.custom-pagination-container', clickable: true }" :loop="true" :autoplay="{ delay: 3000 }">
         <SwiperSlide>
-          <img src="./s6/pic01.jpg" alt="bg" />
+          <img src="./s7/pic01.jpg" alt="pic" />
           <div class="caption font-['Noto_Serif_TC',serif]">現場實景修飾圖</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="./s6/pic02.jpg" alt="bg" />
+          <img src="./s7/pic02.jpg" alt="pic" />
+          <div class="caption font-['Noto_Serif_TC',serif]">現場實景修飾圖</div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="./s7/pic03.jpg" alt="pic" />
           <div class="caption font-['Noto_Serif_TC',serif]">現場實景修飾圖</div>
         </SwiperSlide>
 
@@ -59,14 +63,14 @@ import 'swiper/css/pagination'
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s6 {
+.s7 {
   display: flex;
   flex-wrap: wrap;
-  background-color: #E6E6E6;
+  background-image: url(./s7/bg.png);
 
   @media screen and (min-width: 768px) {
     justify-content: center;
-    gap: size(200);
+    gap: size(250);
     padding: size(165);
   }
 
@@ -77,8 +81,8 @@ import 'swiper/css/pagination'
 
     @media screen and (min-width: 768px) {
       padding: 0 0 0 size(15);
-      width: size(450);
-      order: 2;
+      width: size(420);
+      // order: 2;
     }
 
     h2 {
@@ -86,16 +90,15 @@ import 'swiper/css/pagination'
 
       &::before {
         content: '';
-        background-image: url(./s3/title_line_m.svg);
-        background-size: sizem(290);
+        background-image: url(./s7/title_line_m.svg);
+        background-size: 100%;
         background-repeat: no-repeat;
         background-position: left center;
         width: 100%;
         height: 100%;
 
         @media screen and (min-width: 768px) {
-          background-image: url(./s3/title_line.svg);
-          background-size: size(400);
+          background-image: url(./s7/title_line.svg);
         }
 
         position: absolute;
@@ -108,7 +111,7 @@ import 'swiper/css/pagination'
       padding-left: sizem(10);
 
       @media screen and (min-width: 768px) {
-        padding-top: size(225);
+        padding-top: size(175);
         padding-left: size(30);
         font-size: size(36);
         margin-bottom: size(20);
@@ -156,7 +159,7 @@ import 'swiper/css/pagination'
 
     @media screen and (min-width: 768px) {
       width: size(900);
-      order: 1;
+      // order: 1;
       margin-bottom: 0
     }
 
@@ -213,7 +216,6 @@ import 'swiper/css/pagination'
 
   }
 
-  
   .swiper-slide {
     position: relative;
   }
