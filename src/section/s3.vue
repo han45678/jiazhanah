@@ -11,7 +11,7 @@
       </p>
     </div>
     <div class="_viewbox">
-      <fullview v-if="0" />
+      <fullview  />
     </div>
   </article>
 </template>
@@ -21,7 +21,7 @@
 
 .s3 {
   display: flex;
-
+flex-wrap: wrap;
   @media screen and (min-width: 768px) {
     justify-content: center;
     gap: size(285);
@@ -102,6 +102,8 @@
   }
 
   ._viewbox {
+    overflow: hidden;
+    width: 100%;
     @media screen and (min-width: 768px) {
       width: size(900);
       order: 1;
