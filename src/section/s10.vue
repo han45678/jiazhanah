@@ -1,10 +1,12 @@
 <template>
   <article class="s10">
     <div class="txt font-['Noto_Serif_TC',serif]">
-      <h2>安享品味 嚴選國際建材</h2>
+      <h2>
+        <span data-aos="fade-up">安享品味 嚴選國際建材</span>
+      </h2>
       <img class="line" src="./s3/line.svg" alt="line">
       <p>
-        佳展建設精心打造十年里程碑代表作，精挑細選頂尖建材與配備，以精品工藝，開啟品味質感的每一天。
+        <span data-aos="fade-up">佳展建設精心打造十年里程碑代表作，精挑細選頂尖建材與配備，以精品工藝，開啟品味質感的每一天。</span>
       </p>
     </div>
     <div class="pic">

@@ -10,10 +10,12 @@ import 'swiper/css/pagination'
 <template>
   <article class="s6">
     <div class="txt font-['Noto_Serif_TC',serif]">
-      <h2>安享便捷 5分鐘北外環道</h2>
+      <h2>
+        <span data-aos="fade-up">安享便捷 5分鐘北外環道</span>
+      </h2>
       <img class="line" src="./s3/line.svg" alt="line">
       <p>
-        安和路寬達24米，交通四通八達，駕車約5分鐘即可瞬接北外環，速抵南科、國道1號、國道8號，通勤移動效率滿分，南北奔馳更快意。
+        <span data-aos="fade-up">安和路寬達24米，交通四通八達，駕車約5分鐘即可瞬接北外環，速抵南科、國道1號、國道8號，通勤移動效率滿分，南北奔馳更快意。</span>
       </p>
     </div>
     <div class="pic">

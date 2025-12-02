@@ -10,10 +10,10 @@ import 'swiper/css/pagination'
 <template>
   <article class="s12">
     <div class="txt font-['Noto_Serif_TC',serif]">
-      <h2>安適生活 繁華3大商圈</h2>
+      <h2><span data-aos="fade-up">安適生活 繁華3大商圈</span></h2>
       <img class="line" src="./s3/line.svg" alt="line">
       <p>
-        安和路黃金機能圈，吃喝玩樂全包辦。輕車可達和順、安和路、北安路3大商圈，日常所需盡善盡美。連鎖超市、完善學區、醫療院所通通有，便利生活輕鬆享。
+        <span data-aos="fade-up">安和路黃金機能圈，吃喝玩樂全包辦。輕車可達和順、安和路、北安路3大商圈，日常所需盡善盡美。連鎖超市、完善學區、醫療院所通通有，便利生活輕鬆享。</span>
       </p>
     </div>
     <div class="pic">

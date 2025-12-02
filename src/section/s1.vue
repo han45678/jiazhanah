@@ -2,15 +2,15 @@
   <article class="s1 font-[Amiri,serif,'Noto_Serif_TC']" id="s1">
     <!-- data-aos="fade-up" data-aos-delay="800" data-aos-offset="-200" 160 45 115 -->
     <div class="txt">
-      <img class="logo" src="./s1/logo.svg" alt="logo">
-      <img class="t1" src="./s1/t1.svg" alt="text">
-      <img class="t2" src="./s1/t2.svg" alt="text">
-      <img class="t3" src="./s1/t3.svg" alt="text">
+      <img class="logo" src="./s1/logo.svg" alt="logo" data-aos="fade-up" >
+      <img class="t1" src="./s1/t1.svg" alt="text" data-aos="fade-up" >
+      <img class="t2" src="./s1/t2.svg" alt="text" data-aos="fade-up" >
+      <img class="t3" src="./s1/t3.svg" alt="text" data-aos="fade-up" >
     </div>
     <div class="right">
       <img class="bg" src="./s1/right.webp" alt="right">
       <div class="bird">
-        <img src="./s1/bird.webp" alt="bird">
+        <img src="./s1/bird.webp" alt="bird" data-aos="fade-left" >
       </div>
     </div>
   </article>

@@ -1,10 +1,14 @@
 <template>
   <article class="s3">
     <div class="txt font-['Noto_Serif_TC',serif]">
-      <h2>安南匯聚四大園區</h2>
+      <h2>
+        <span data-aos="fade-up">安南匯聚四大園區</span>
+      </h2>
       <img class="line" src="./s3/line.svg" alt="line">
       <p>
-        台南科技工業區、和順工業區、新吉工業區、總頭寮工業區，攜手南科全球半導體聚落共榮，領航台南經濟命脈。重大建設推動城市升級，繁榮新景持續擴展，坐享宜居優勢，未來增值無限。
+        <span data-aos="fade-up">
+          台南科技工業區、和順工業區、新吉工業區、總頭寮工業區，攜手南科全球半導體聚落共榮，領航台南經濟命脈。重大建設推動城市升級，繁榮新景持續擴展，坐享宜居優勢，未來增值無限。
+        </span>
       </p>
     </div>
     <div class="_viewbox">

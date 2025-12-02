@@ -10,10 +10,10 @@ import 'swiper/css/pagination'
 <template>
   <article class="s8">
     <div class="txt font-['Noto_Serif_TC',serif]">
-      <h2>安心學習 12年快樂成長</h2>
+      <h2><span data-aos="fade-up">安心學習 12年快樂成長</span></h2>
       <img class="line" src="./s3/line.svg" alt="line">
       <p>
-        從幼兒園到國中，外語能力從小紮根，培養國際觀。愛森國際幼兒園在家旁，上學好安心，父母好省心。和順國小、和順國中，沉浸雙語教育環境，孩子未來超前部署。
+        <span data-aos="fade-up">從幼兒園到國中，外語能力從小紮根，培養國際觀。愛森國際幼兒園在家旁，上學好安心，父母好省心。和順國小、和順國中，沉浸雙語教育環境，孩子未來超前部署。</span>
       </p>
     </div>
     <div class="pic">

@@ -5,7 +5,7 @@
     <div class="win">
       <img class="win_bg hidden md:block" src="./s5/bg.webp" alt="bg">
       <img class="win_bg block md:hidden" src="./s5/bg_m.webp" alt="bg">
-      <div class="text">
+      <div class="text" data-aos="fade-up">
         <h2 class="font-['Noto_Serif_TC',serif]">
           安<br>
           心<br>

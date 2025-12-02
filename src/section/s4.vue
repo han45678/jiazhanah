@@ -7,7 +7,7 @@
     </div>
     <div class="text">
       <img class="bg" src="./s4/line.svg" alt="bg">
-      <div class="text-content font-['Noto_Serif_TC',serif]">
+      <div class="text-content font-['Noto_Serif_TC',serif]" data-aos="fade-up">
         <div class="item">
           <h3>安和大道</h3>
           <p>核心居域享繁華</p>
