@@ -12,7 +12,7 @@ export default {
     fbMessage: 'https://m.me/61578255539676/',
     caseName: caseName,
     houseInfos: [
-        /*
+        
         ["空間設計", "相即空間設計"],
         ["企劃銷售", "低碳健康樂活行銷"],
         ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
@@ -20,7 +20,7 @@ export default {
         ["建築設計", "弘憲聯合建築師事務所"],
         ["使照號碼", "王朝雍建築師事務所"],
         ["行銷企劃", "自售"],
-        */
+        
     ],
     gtmCode: ['GTM-PZGX9WST'], // 可放置多個
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
