@@ -2,14 +2,14 @@
   <article class="s5">
     <img class="bg hidden md:block" src="./s5/bg.webp" alt="bg">
     <img class="bg block md:hidden" src="./s5/bg_m.webp" alt="bg">
-    <div class="win">
+    <div class="win" data-aos="zoom-in">
       <img class="win_bg hidden md:block" src="./s5/bg.webp" alt="bg">
       <img class="win_bg block md:hidden" src="./s5/bg_m.webp" alt="bg">
       <div class="text" data-aos="fade-up">
         <h2 class="font-['Noto_Serif_TC',serif]">
           安<br>
           心<br>
-          <img src="./s5/line.svg" alt="bg" ><br>
+          <img src="./s5/line.svg" alt="bg"><br>
           生<br>
           活
         </h2>
@@ -30,27 +30,45 @@
 .s5 {
   position: relative;
   overflow: hidden;
+
   .bg {
     width: 100dvw;
     aspect-ratio: 9/16;
     filter: blur(5px);
+
     @media screen and (min-width: 768px) {
-        aspect-ratio: 16/9;
-      }
+      aspect-ratio: 16/9;
+    }
   }
 
   .win {
     position: absolute;
-    width: calc(100% - sizem(70));
+    // width: calc(100% - sizem(70));
+    width: sizem(100);
     height: calc(100% - sizem(70));
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid #fff;
     overflow: hidden;
+
     @media screen and (min-width: 768px) {
-      width: calc(100% - size(180));
+      // width: calc(100% - size(180));
+      width: size(275);
       height: calc(100% - size(220));
+    }
+
+    &[data-aos^=zoom][data-aos^=zoom] {
+      opacity: 1 !important;
+      transition: 2s ease-in-out;
+      &.aos-animate {
+        transform: translate(-50%, -50%) !important;
+        width: calc(100% - sizem(70));
+
+        @media screen and (min-width: 768px) {
+          width: calc(100% - size(180));
+        }
+      }
     }
 
     .text {
@@ -68,22 +86,26 @@
       align-content: center;
       text-align: center;
       color: #fff;
-      h2{
+
+      h2 {
         width: 100%;
         text-align: center;
         font-size: sizem(32);
         font-weight: 600;
         line-height: 1;
         padding-bottom: sizem(25);
+
         @media screen and (min-width: 768px) {
           font-size: size(60);
           padding-bottom: size(50);
         }
-        img{
+
+        img {
           width: sizem(12);
           height: sizem(58);
           padding-top: sizem(5);
           padding-bottom: sizem(5);
+
           @media screen and (min-width: 768px) {
             width: size(24);
             height: size(110);
@@ -92,12 +114,14 @@
           }
         }
       }
-      p{
+
+      p {
         font-weight: 600;
         line-height: 1.4;
         width: sizem(260);
         font-size: sizem(12);
         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.40);
+
         @media screen and (min-width: 768px) {
           width: size(645);
           font-size: size(26);
@@ -112,13 +136,14 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+
       @media screen and (min-width: 768px) {
         aspect-ratio: 16/9;
       }
     }
   }
 
-    .caption {
+  .caption {
     color: #fff;
     font-weight: 600;
     font-size: sizem(10);

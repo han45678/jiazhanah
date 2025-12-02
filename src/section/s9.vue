@@ -2,7 +2,7 @@
   <article class="s5">
     <img class="bg hidden md:block" src="./s9/bg.jpg" alt="bg">
     <img class="bg block md:hidden" src="./s9/bgm.jpg" alt="bg">
-    <div class="win">
+    <div class="win" data-aos="zoom-in">
       <img class="win_bg hidden md:block" src="./s9/bg.jpg" alt="bg">
       <img class="win_bg block md:hidden" src="./s9/bgm.jpg" alt="bg">
       <div class="text" data-aos="fade-up">
@@ -45,7 +45,8 @@
 
   .win {
     position: absolute;
-    width: calc(100% - sizem(70));
+    // width: calc(100% - sizem(70));
+    width: sizem(100);
     height: calc(100% - sizem(70));
     top: 50%;
     left: 50%;
@@ -54,8 +55,22 @@
     overflow: hidden;
 
     @media screen and (min-width: 768px) {
-      width: calc(100% - size(180));
+      // width: calc(100% - size(180));
+      width: size(275);
       height: calc(100% - size(220));
+    }
+
+    &[data-aos^=zoom][data-aos^=zoom] {
+      opacity: 1 !important;
+      transition: 2s ease-in-out;
+      &.aos-animate {
+        transform: translate(-50%, -50%) !important;
+        width: calc(100% - sizem(70));
+
+        @media screen and (min-width: 768px) {
+          width: calc(100% - size(180));
+        }
+      }
     }
 
     .text {
