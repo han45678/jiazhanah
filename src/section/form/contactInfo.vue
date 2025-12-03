@@ -6,26 +6,26 @@
    <!--  <div class="logo" data-aos="zoom-in" data-aos-delay="600">
       <img src="@/section/s2/logobg.webp"><img src="@/section/s2/logo.svg"></div> -->
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'; onPhoneClick();" v-if="info.phone">
-        <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
+      <div class="flex contact-item justify-center items-center font-['Noto_Serif_TC',serif]" @click="modalOpen = true; modalType = 'phone'; onPhoneClick();" v-if="info.phone">
+        <img src="./icon/phone.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'; onMsgClick();">
-        <img src="//h35.banner.tw/img//form/messenger.svg" alt="Facebook 諮詢" srcset="" />
+      <div class="flex contact-item justify-center items-center font-['Noto_Serif_TC',serif]" @click="modalOpen = true; modalType = 'fb'; onMsgClick();">
+        <img src="./icon/messenger.svg" alt="Facebook 諮詢" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
-      <div class="flex contact-item justify-center items-center btfanpage" @click="open(); onFBClick();">
-        <img src="//h35.banner.tw/img//form/fb.svg" alt="前往粉絲專頁" srcset="" />
+      <div class="flex contact-item justify-center items-center font-['Noto_Serif_TC',serif] btfanpage" @click="open(); onFBClick();">
+        <img src="./icon/fb.svg" alt="前往粉絲專頁" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
     <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
-      <div class="flex contact-item justify-center items-center address">
+      <div class="flex contact-item justify-center items-center font-['Noto_Serif_TC',serif] address">
         <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-center items-center googlemap"
+      <div class="flex contact-item justify-center items-center font-['Noto_Serif_TC',serif] googlemap"
         @click="modalOpen = true; modalType = 'gmap'; onMapClick();">
-        <img src="//h35.banner.tw/img//form/gmap.svg" alt="導航 GoogleMap" srcset="" />
+        <img src="./icon/gmap.svg" alt="導航 GoogleMap" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -35,21 +35,21 @@
 
   <!-- Mobile contact info -->
     <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" 
+    <div class="flex flex-1 flex-col contact-item justify-center items-center font-['Noto_Serif_TC',serif]" 
       @click="modalOpen = true; modalType = 'phone'; onPhoneClick();" v-if="info.phone">
       <img src="//h35.banner.tw/img//form/phone.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <div class="flex flex-1 flex-col contact-item justify-center items-center font-['Noto_Serif_TC',serif]"
       @click="modalOpen = true; modalType = 'fb'; onMsgClick();">
       <img src="//h35.banner.tw/img//form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
+    <div class="flex flex-1 flex-col contact-item justify-center items-center font-['Noto_Serif_TC',serif]" @click="scrollTo('.order')">
       <img src="//h35.banner.tw/img//form/pen.svg" alt="預約賞屋" srcset="" />
       <div>預約賞屋</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <div class="flex flex-1 flex-col contact-item justify-center items-center font-['Noto_Serif_TC',serif]"
       @click="modalOpen = true; modalType = 'gmap'; onMapClick();"  v-if="info.googleLink" >
       <img src="//h35.banner.tw/img//form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
@@ -143,12 +143,12 @@ img{width: 100%;
 
     .contact-item {
       background: #b6006400;
-      border: 1px solid #fff;
-      color: #fff;
+      border: 1px solid #3B8281;
+      color: #333;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
-      border-radius: .5em;
+      border-radius: 0;
       // font-size: size(16);
       line-height: 1.6;//3.8
       letter-spacing: 0em;
@@ -172,22 +172,22 @@ img{width: 100%;
         max-width: 1.69em;
         height: auto;
         max-height: 1.69em;
-        filter: brightness(0) invert(1);
+        // filter: brightness(0) invert(1);
         transition: all .5s;
         margin: 0;
       }
 
       &.address {
-        background-color: #fff;
+        // background-color: #fff;
         background-image: none;
-        color: #000;
+        // color: #000;
         z-index: 0;
         position: relative;
         flex:2.17;
         // border-radius: 999px 0 0 999px;
       //  max-width: 9999px;
         justify-content: center;
-        border-radius: .5em 0 0 .5em;
+        border-radius: 0;
         &::before {
           content: "";
           position: absolute;
@@ -209,7 +209,7 @@ img{width: 100%;
         flex:1;
   //    background-color: #9B1E44;
       border-left-width: 0;
-      border-radius: 0 .5em .5em 0;
+      border-radius: 0;
       //  color: #fff;
 /*
         img {

@@ -58,9 +58,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
+        <p class="text-[#000]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#fff000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#CC0000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -70,8 +70,8 @@
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send -->
-      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending ? '發送中..' : '立即預約' }}
+      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer font-['Noto_Serif_TC',serif]" @click="send()">
+        {{ sending ? '發送中..' : '送出表單' }}
       </div>
 
       <!-- Contact Info -->
@@ -115,14 +115,14 @@
   background-size: auto;
   */
   //background: linear-gradient(to bottom, #00a6e9, #009e41);
-  background:#04836e;
+  // background:#04836e;
 
 
 
   .order-title {
     font-size: size(40);
     font-weight: 600;
-    color: #fff;
+    color: #3D3939 ;
     padding-top: 1.5em;
 
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -252,10 +252,9 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #a30c2500;
-    border: 1px solid #FFF;
-    border: 1;
-    border-radius: .5em;
+    background-color: #3B8281;
+    border: 1px solid #3B8281;
+    border-radius: 0; 
 
     width: 308px;
     height: 3.3em;

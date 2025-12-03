@@ -1,11 +1,11 @@
 const caseName = '佳展建設';
 export default {
     caseid: '91184de3-cfb1-4bcc-8ca2-d91ef7142c5b',
+    address:'接待中心：台南市北區中華西路二段857號',
     address1: '接待中心', //按鈕區的--- 如空白會只呈現地址
     address2: '接待中心', //map點下確認的--- 如空白會顯示"導航地址"
-    address: '',
     googleSrc:
-        'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3671.102501250292!2d120.21575487603715!3d23.05670341505229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDAzJzI0LjEiTiAxMjDCsDEzJzA2LjAiRQ!5e0!3m2!1szh-TW!2stw!4v1757579588157!5m2!1szh-TW!2stw',
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.4769292962806!2d120.18590139999999!3d23.0062545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7723c77da6b9%3A0x948606cdea29a273!2z5L2z6YuQ6YOhIOaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1764692376149!5m2!1szh-TW!2stw',
     googleLink: 'https://maps.app.goo.gl/5qWPKRUKT6wnM8aq8',
     phone: '(06)262-8888',
     fbLink: 'https://www.facebook.com/61578255539676/',
@@ -13,14 +13,16 @@ export default {
     caseName: caseName,
     houseInfos: [
         
-        ["空間設計", "相即空間設計"],
-        ["企劃銷售", "低碳健康樂活行銷"],
-        ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
-        ["經紀人", "(91)北市經證字第00692號 陳子瑞"], 
-        ["建築設計", "弘憲聯合建築師事務所"],
-        ["使照號碼", "王朝雍建築師事務所"],
-        ["行銷企劃", "自售"],
-        
+        ["投資興建 / ", "佳展建設股份有限公司"],
+        ["工程營造", "協侑營造有限公司"],
+        ["建築設計", "曾聰憲建築師事務所"],
+        ["結構工程", "RC"], 
+        ["規劃戶數", "住家222戶 / 車位272個 / 店面9戶"],
+        ["坪數規劃", "住家24-42坪 / 店面23-63坪"],
+        ["樓層規劃", "地上15層 / 地下3層"],
+        ["企劃銷售", "新富嘉廣告有限公司"],
+        ["基地位置", "安南區州南段1750地號"],
+        ["接待中心", "台南市安南區台江大道一段829號旁"],
     ],
     gtmCode: ['GTM-PZGX9WST'], // 可放置多個
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
@@ -29,8 +31,8 @@ export default {
     recaptcha_site_key: '6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s', // recaptcha v3
     recaptcha_user_token: '6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa',
     order: {
-        title: '立即預約',
-        subTitle: '歡迎預約，將有專人與您聯絡，我們將竭誠為您服務'
+        title: '預約賞屋 CONTACT US',
+        // subTitle: '歡迎預約，將有專人與您聯絡，我們將竭誠為您服務'
     },
     // 底下2個 沒項目就會隱藏
     // 控制固定板的新欄位
@@ -59,31 +61,31 @@ export default {
     navList: [
         {
             name: '安享便捷',
-            target: '.s3',
+            target: '.s6',
             offset: '-60',
             offsetmo: '0'
         },
         {
             name: '安適生活',
-            target: '.s4',
+            target: '.s5',
             offset: '-60',
             offsetmo: '0'
         },
         {
             name: '安心學習',
-            target: '.s4',
+            target: '.s8',
             offset: '-60',
             offsetmo: '0'
         },
         {
             name: '安享品味',
-            target: '.s4',
+            target: '.s10',
             offset: '-60',
             offsetmo: '0'
         },
         {
             name: '安家推手',
-            target: '.s4',
+            target: '.s11',
             offset: '-60',
             offsetmo: '0'
         }

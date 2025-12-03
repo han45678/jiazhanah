@@ -1,5 +1,5 @@
 <template>
-  <article class="s5">
+  <article class="s9">
     <img class="bg hidden md:block" src="./s9/bg.jpg" alt="bg">
     <img class="bg block md:hidden" src="./s9/bgm.jpg" alt="bg">
     <div class="win" data-aos="zoom-in">
@@ -29,7 +29,7 @@
 <style lang="scss" scoped>
 @import "@/assets/style/function.scss";
 
-.s5 {
+.s9 {
   position: relative;
   overflow: hidden;
 

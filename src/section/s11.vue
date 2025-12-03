@@ -8,11 +8,43 @@
       </p>
     </div>
     <div class="pic">
-      <div>
-        <img src="./s11/pic01.png" alt="pic">
+      <div class="pic_left">
+        <div class="item">
+          <img src="./s11/pic01-1.jpg" alt="pic">
+          <p class="font-['Noto_Serif_TC',serif]">
+            佳<br>
+            展<br>
+            大<br>
+            展
+          </p>
+        </div>
+        <div class="item">
+          <img src="./s11/pic01-2.jpg" alt="pic">
+          <p class="font-['Noto_Serif_TC',serif]">
+            佳<br>
+            展<br>
+            大<br>
+            方
+          </p>
+        </div>
+        <div class="item">
+          <img src="./s11/pic01-3.jpg" alt="pic">
+          <p class="font-['Noto_Serif_TC',serif]">
+            佳<br>
+            展<br>
+            大<br>
+            展
+          </p>
+        </div>
       </div>
-      <div>
+      <div class="pic_right">
         <img src="./s11/pic02.png" alt="pic">
+        <p class="font-['Noto_Serif_TC',serif]">
+          佳<br>
+          展<br>
+          安<br>
+          和
+        </p>
       </div>
     </div>
 
@@ -26,6 +58,7 @@
   display: flex;
   flex-wrap: wrap;
   background-image: url(./s7/bg.png);
+  background-size: cover;
 
   @media screen and (min-width: 768px) {
     justify-content: center;
@@ -110,7 +143,7 @@
   .pic {
     position: relative;
     overflow: visible;
-    width: calc(100% - sizem(80));
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: sizem(40);
@@ -120,6 +153,102 @@
     @media screen and (min-width: 768px) {
       width: size(1165);
       margin-bottom: 0
+    }
+
+    .pic_left {
+      width: sizem(140);
+      padding-left: sizem(20);
+
+      @media screen and (min-width: 768px) {
+        width: size(370);
+        padding-left: 0;
+        padding-right: size(24);
+      }
+
+      .item {
+        position: relative;
+        margin-top: sizem(15);
+
+        &:nth-child(1) {
+          margin-top: 0 !important;
+        }
+
+        @media screen and (min-width: 768px) {
+          margin-top: size(40);
+        }
+
+        img {
+          width: 100%;
+        }
+
+        p {
+          position: absolute;
+          line-height: 1;
+          border: 1px solid #3B8281;
+          background-color: rgba(204, 204, 204, 0.5);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          width: sizem(18);
+          height: sizem(55);
+          font-size: sizem(10);
+          right: sizem(-12);
+          top: sizem(-10);
+
+          @media screen and (min-width: 768px) {
+            width: size(36);
+            height: size(110);
+            font-size: size(20);
+            right: size(-28);
+            top: size(-15);
+          }
+        }
+      }
+    }
+
+    .pic_right {
+      width: calc(100% - sizem(140));
+      position: relative;
+
+      @media screen and (min-width: 768px) {
+        width: size(880);
+      }
+
+      img {
+        position: absolute;
+        right: sizem(-40);
+        bottom: sizem(-40);
+        width: sizem(295);
+
+        @media screen and (min-width: 768px) {
+          width: 100%;
+          position: static;
+        }
+      }
+
+      p {
+        position: absolute;
+        line-height: 1;
+        border: 1px solid #3B8281;
+        background-color: rgba(204, 204, 204, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: sizem(25);
+        height: sizem(70);
+        font-size: sizem(12);
+        right: sizem(30);
+        top: sizem(-30);
+
+        @media screen and (min-width: 768px) {
+          width: size(56);
+          height: size(165);
+          font-size: size(27);
+          right: size(100);
+          top: size(125);
+        }
+      }
     }
 
   }
