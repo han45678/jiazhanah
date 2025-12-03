@@ -41,7 +41,7 @@ import 'swiper/css/pagination'
 
 .s8 {
   display: flex;
-  // flex-wrap: wrap;
+  flex-wrap: wrap;
   background-color: #E6E6E6;
 
   @media screen and (min-width: 768px) {
