@@ -10,7 +10,7 @@
       </p>
     </div>
     <div class="pic">
-      <img src="./s10/pic.jpg" alt="pic" />
+      <img src="./s10/pic.webp" alt="pic" />
     </div>
   </article>
 </template>

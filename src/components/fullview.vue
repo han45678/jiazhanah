@@ -1,6 +1,6 @@
 <template>
     <div class="viewbox" ref="viewbox">
-        <img ref="viewImg" src="@/section/s3/map.jpg" alt="" srcset="">
+        <img ref="viewImg" src="@/section/s3/map.webp" alt="" srcset="">
         <div class="mask" :class="{ hide: swiped }">
             <img src="@/components/fullview/finger.png" alt="" srcset="">
         </div>

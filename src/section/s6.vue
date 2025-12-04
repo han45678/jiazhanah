@@ -42,11 +42,11 @@ import 'swiper/css/pagination'
         :navigation="{ nextEl: '.custom-next', prevEl: '.custom-prev' }"
         :pagination="{ el: '.custom-pagination-container', clickable: true }" :loop="true" :autoplay="{ delay: 3000 }">
         <SwiperSlide>
-          <img src="./s6/pic01.jpg" alt="bg" />
+          <img src="./s6/pic01.webp" alt="bg" />
           <div class="caption font-['Noto_Serif_TC',serif]">現場實景修飾圖</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="./s6/pic02.jpg" alt="bg" />
+          <img src="./s6/pic02.webp" alt="bg" />
           <div class="caption font-['Noto_Serif_TC',serif]">現場實景修飾圖</div>
         </SwiperSlide>
 

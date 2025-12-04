@@ -1,24 +1,29 @@
 <template>
     <div class="house" v-if="info.houseInfos.length > 0">
-        <div class="flex h-full flex-col md:flex-row items-center justify-between">
+        
 
-            <div class="flex-1 items-center justify-center py-10 font-['Noto_Sans_TC']">
-                <div class="h-full info-box mx-auto flex flex-col items-center justify-center">
-                    <div class="co"></div>
-                    <div class="info-items mt-4 w-full">
-                        <div class="item font-bold flex items-center w-full whitespace-nowrap"
-                            v-for="item in info.houseInfos">
-                            <p class="sub mr-5 pl-2 text-[#fff]" v-html="item[0]"></p>
-                            <p class="whitespace-pre-line leading-normal text-left font-normal" v-html="item[1]">
-                            </p>
-                        </div>
-                        <div class="item font-bold flex items-center w-full whitespace-nowrap">
-                            <p class=" pl-2 whitespace-pre-line leading-normal text-left font-normal">民間新建建築類(H-2住宅)
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        <div class="txt">
+            <img class="logo" src="@/section/s1/logo.svg" alt="logo">
+            <img class="t1" src="@/section/info/t1.svg" alt="text">
+
+            <img class="t2" src="@/section/info/pic.png" alt="text">
+            <img class="t3" src="@/section/s1/t1.svg" alt="text">
+            <img class="t4" src="@/section/s1/t2.svg" alt="text">
+        </div>
+        <div class="right">
+            <img class="bg" src="@/section/s1/right.webp" alt="right">
+            <div class="bird">
+                <img src="@/section/s1/bird.webp" alt="bird" data-aos="fade-left">
             </div>
+        </div>
+
+        <div class="info">
+            <ul>
+                <li v-for="item in info.houseInfos">
+                    <p class="font-['Noto_Serif_TC',serif] text-[#fff]" v-html="item[0]"></p>
+                    <p class="font-['Noto_Serif_TC',serif] text-[#fff]" v-html="item[1]"></p>
+                </li>
+            </ul>
         </div>
     </div>
 
@@ -40,14 +45,158 @@ $house-c2: #000;
 }
 
 .house {
-    // height: auto;
-    color: $house-c2;
-    font-size: size(22);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 162.5dvh;
+    background: url("@/section/s1/bgm.webp") center;
+    background-size: cover;
+    position: relative;
 
-    // height:4em;
-    img {
-        height: 1.3em;
-        vertical-align: middle;
+    @media screen and (min-width: 768px) {
+        height: 100dvh;
+        background-image: url("@/section/s1/bg.webp");
+    }
+
+    .txt {
+        position: absolute;
+        padding-right: sizem(160);
+        top: sizem(90);
+
+        @media screen and (min-width: 768px) {
+            padding-right: 0;
+            top: size(150);
+            left: size(270);
+            margin: auto;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+
+            &.logo {
+                width: sizem(115);
+
+                @media screen and (min-width: 768px) {
+                    width: size(300);
+                }
+            }
+
+            &.t1 {
+                margin-top: sizem(50);
+                width: sizem(90);
+
+                @media screen and (min-width: 768px) {
+                    margin-top: size(100);
+                    width: size(205);
+                }
+            }
+
+            &.t2 {
+                margin-top: sizem(25);
+                width: sizem(7);
+
+                @media screen and (min-width: 768px) {
+                    margin-top: size(45);
+                    width: size(17);
+                }
+            }
+
+            &.t3 {
+                margin-top: sizem(20);
+                width: sizem(100);
+
+                @media screen and (min-width: 768px) {
+                    margin-top: size(65);
+                    width: size(215);
+                }
+            }
+
+            &.t4 {
+                margin-top: sizem(10);
+                width: sizem(100);
+
+                @media screen and (min-width: 768px) {
+                    margin-top: size(30);
+                    width: size(215);
+                }
+            }
+        }
+    }
+
+    .right {
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        .bg {
+            width: auto;
+            height: 100dvh;
+        }
+
+        .bird {
+            width: 100%;
+            position: absolute;
+            width: sizem(120);
+            top: sizem(225);
+            right: 18%;
+
+            @media screen and (min-width: 768px) {
+                width: size(240);
+                top: size(360);
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .info{
+        position: absolute;
+        top: 107.5dvh;
+        height: 50dvh;
+        @media screen and (min-width: 768px) {
+        right: size(450);
+        top: size(125);
+        height: auto;
+        }
+        ul{
+            li{
+                text-align: left;
+                display: flex;
+                align-items: center;
+                p{
+                    line-height: 2.25;
+                    &:nth-child(1){
+                        font-weight: 600;
+                        font-size: sizem(12);
+                        @media screen and (min-width: 768px) {
+                            font-size: size(22);
+                        }
+                        &::after{
+                            content: '/';
+                            display: inline-block;
+                            margin-right: sizem(10);
+                            margin-left: sizem(5);
+                            @media screen and (min-width: 768px) {
+                            margin-right: size(10);
+                            margin-left: size(5);
+                            }
+                        }
+                    }
+                    &:nth-child(2){
+                        font-weight: 600;
+                        font-size: sizem(16);
+                        @media screen and (min-width: 768px) {
+                            font-size: size(30);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

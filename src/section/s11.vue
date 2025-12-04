@@ -10,7 +10,7 @@
     <div class="pic">
       <div class="pic_left">
         <div class="item">
-          <img src="./s11/pic01-1.jpg" alt="pic">
+          <img src="./s11/pic01-1.webp" alt="pic">
           <p class="font-['Noto_Serif_TC',serif]">
             佳<br>
             展<br>
@@ -19,7 +19,7 @@
           </p>
         </div>
         <div class="item">
-          <img src="./s11/pic01-2.jpg" alt="pic">
+          <img src="./s11/pic01-2.webp" alt="pic">
           <p class="font-['Noto_Serif_TC',serif]">
             佳<br>
             展<br>
@@ -28,7 +28,7 @@
           </p>
         </div>
         <div class="item">
-          <img src="./s11/pic01-3.jpg" alt="pic">
+          <img src="./s11/pic01-3.webp" alt="pic">
           <p class="font-['Noto_Serif_TC',serif]">
             佳<br>
             展<br>
@@ -38,7 +38,13 @@
         </div>
       </div>
       <div class="pic_right">
-        <img src="./s11/pic02.png" alt="pic">
+
+        <img class="main" src="./s11/pic02.webp" alt="pic">
+
+        <img class="light01" src="./s11/light01.webp" alt="light">
+
+        <img class="light02" src="./s11/light02.webp" alt="light">
+
         <p class="font-['Noto_Serif_TC',serif]">
           佳<br>
           展<br>
@@ -215,7 +221,7 @@
         width: size(880);
       }
 
-      img {
+      .main {
         position: absolute;
         right: sizem(-40);
         bottom: sizem(-40);
@@ -224,6 +230,46 @@
         @media screen and (min-width: 768px) {
           width: 100%;
           position: static;
+        }
+      }
+
+      .light01 {
+        position: absolute;
+        width: sizem(30);
+        right: sizem(90);
+        top: sizem(30);
+        mix-blend-mode: screen;
+        opacity: 0;
+        animation-name: slow-fade;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+
+        @media screen and (min-width: 768px) {
+          width: size(50);
+          right: size(377.5);
+          top: size(325);
+        }
+      }
+
+      .light02 {
+        width: sizem(20);
+        right: sizem(200);
+        top: sizem(100);
+        position: absolute;
+        mix-blend-mode: screen;
+        opacity: 0;
+        animation-name: slow-fade;
+        animation-duration: 1.2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+
+        @media screen and (min-width: 768px) {
+          width: size(50);
+          right: size(670);
+          top: size(350);
         }
       }
 
@@ -265,6 +311,19 @@
       font-size: size(16);
       bottom: size(10);
       right: size(10);
+    }
+  }
+
+  @keyframes slow-fade {
+
+    /* 淡出 - 動畫開始時 */
+    0% {
+      opacity: 0;
+    }
+
+    /* 淡入 - 動畫中點時 */
+    100% {
+      opacity: 1;
     }
   }
 }

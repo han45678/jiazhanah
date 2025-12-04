@@ -19,15 +19,15 @@ import 'swiper/css/pagination'
     <div class="pic">
       <Swiper class="bg" :modules="[Navigation, Pagination, Autoplay]" :loop="true" :autoplay="{ delay: 3000 }">
         <SwiperSlide>
-          <img src="./s8/pic.jpg" alt="pic" />
+          <img src="./s8/pic01.webp" alt="pic" />
           <div class="caption font-['Noto_Serif_TC',serif]">現場實景修飾圖</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="./s8/pic.jpg" alt="pic" />
+          <img src="./s8/pic02.webp" alt="pic" />
           <div class="caption font-['Noto_Serif_TC',serif]">現場實景修飾圖</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="./s8/pic.jpg" alt="pic" />
+          <img src="./s8/pic03.webp" alt="pic" />
           <div class="caption font-['Noto_Serif_TC',serif]">現場實景修飾圖</div>
         </SwiperSlide>
       </Swiper>

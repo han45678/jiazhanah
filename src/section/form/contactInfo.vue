@@ -3,8 +3,6 @@
   <div class="contact-info-img">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-   <!--  <div class="logo" data-aos="zoom-in" data-aos-delay="600">
-      <img src="@/section/s2/logobg.webp"><img src="@/section/s2/logo.svg"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center font-['Noto_Serif_TC',serif]" @click="modalOpen = true; modalType = 'phone'; onPhoneClick();" v-if="info.phone">
         <img src="./icon/phone.svg" alt="電話" srcset="" />

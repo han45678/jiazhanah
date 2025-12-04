@@ -42,15 +42,15 @@ import 'swiper/css/pagination'
         :navigation="{ nextEl: '.custom-next', prevEl: '.custom-prev' }"
         :pagination="{ el: '.custom-pagination-container', clickable: true }" :loop="true" :autoplay="{ delay: 3000 }">
         <SwiperSlide>
-          <img src="./s7/pic01.jpg" alt="pic" />
+          <img src="./s7/pic01.webp" alt="pic" />
           <div class="caption font-['Noto_Serif_TC',serif]">現場實景修飾圖</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="./s7/pic02.jpg" alt="pic" />
+          <img src="./s7/pic02.webp" alt="pic" />
           <div class="caption font-['Noto_Serif_TC',serif]">現場實景修飾圖</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="./s7/pic03.jpg" alt="pic" />
+          <img src="./s7/pic03.webp" alt="pic" />
           <div class="caption font-['Noto_Serif_TC',serif]">現場實景修飾圖</div>
         </SwiperSlide>
 
@@ -69,7 +69,7 @@ import 'swiper/css/pagination'
   display: flex;
   flex-wrap: wrap;
   background-image: url(./s7/bg.png);
-
+  background-size: cover;
   @media screen and (min-width: 768px) {
     justify-content: center;
     gap: size(250);
