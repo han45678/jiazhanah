@@ -30,8 +30,6 @@
           </template>
           <!-- 動態 select end-->
 
-
-
           <!--  -->
           <label class="row"><span>居住縣市</span>
             <select class="select w-full rounded-none" v-model="formData.city">

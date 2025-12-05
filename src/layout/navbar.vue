@@ -8,7 +8,7 @@
         </div>
         <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
             <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
-            <div class="menu-x-btn">
+            <div class="menu-x-btn" @click="menuOpen = !menuOpen">
                 <img src="@/section/menu/x.svg" alt="icon">
             </div>
             <template v-for="item, i in info.navList">
@@ -148,6 +148,11 @@
         background-color: #fff;
         background-size: cover;
         background-position: bottom right;
+        transform: translateX(100%);
+        transition: 0.3s;
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
 
         .menu-x-btn{
             position: absolute;
@@ -170,6 +175,7 @@
 
             @media screen and (max-width: 767px) {
                 font-size: sizem(30);
+                line-height: 2;
             }
 
             span{
@@ -182,7 +188,7 @@
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
-                bottom: 25px;
+                bottom: size(25);
                 width: 0;
                 height: size(12);
                 background-color: #C9BC9C;
@@ -191,6 +197,7 @@
                 @media screen and (max-width: 767px) {
                     width:0;
                     height: sizem(12);
+                    bottom: sizem(10);
                 }
             }
 
