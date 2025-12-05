@@ -8,12 +8,15 @@
         </div>
         <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
             <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
+            <div class="menu-x-btn">
+                <img src="@/section/menu/x.svg" alt="icon">
+            </div>
             <template v-for="item, i in info.navList">
                 <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] "
                     v-bind:class="{ btn2: item.type }"
                     @click="scrollTo(item.target, $isMobile() ? item.offsetmo ? item.offsetmo : item.offset : item.offset)"
                     v-if="!(item.name === '地圖導航' && !info.address) && !(item.name === '立即來電' && !info.phone)">
-                    <span>{{ item.name }}</span>
+                    <span class="font-['Noto_Serif_TC',serif]">{{ item.name }}</span>
                 </div>
             </template>
             <div class="close" @click="menuOpen = !menuOpen" v-if="$isMobile()">
@@ -29,8 +32,13 @@
 @import "@/assets/style/function.scss";
 
 .nav {
-    right: size(114);
-    top: size(51);
+    right: sizem(15);
+    top: sizem(15);
+
+    @media screen and (min-width: 768px) {
+        right: size(15);
+        top: size(15);
+    }
 
     .logo {
         width: size(145);
@@ -126,7 +134,7 @@
         flex-direction: row;
         top: 0;
         right: 0;
-        background: #032763cc;
+        // background: #032763cc;
         width: size(485);
         height: 100dvh;
         z-index: 5;
@@ -136,8 +144,17 @@
         align-items: center;
         justify-content: center;
         align-content: center;
-        display: none;
+        background-image: url('@/section/menu/bg.png');
+        background-color: #fff;
+        background-size: cover;
+        background-position: bottom right;
 
+        .menu-x-btn{
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            cursor: pointer;
+        }
         .menu-item {
             position: relative;
             display: block;
@@ -148,20 +165,42 @@
                 width: size(43);
             }
 
+            font-size: size(30);
+            line-height: 3;
+
+            @media screen and (max-width: 767px) {
+                font-size: sizem(30);
+            }
+
+            span{
+                position: relative;
+                z-index: 1;
+            }
+
             &:after {
                 content: '';
                 position: absolute;
-                bottom: -5px;
-                width: 0%;
-                height: size(2);
-                background-color: #fff;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 25px;
+                width: 0;
+                height: size(12);
+                background-color: #C9BC9C;
                 transition: all .35s;
+                opacity: 0.6;
+                @media screen and (max-width: 767px) {
+                    width:0;
+                    height: sizem(12);
+                }
             }
 
             &:hover {
 
                 &:after {
-                    width: 100%;
+                    width: size(130);
+                @media screen and (max-width: 767px) {
+                    width: sizem(130);
+                }
                 }
             }
 
@@ -341,7 +380,7 @@
             justify-content: center;
             flex-direction: column;
             padding: 0;
-            //  background-image: url('@/section/menubgm.png');
+            background-image: url('@/section/menu/bg.png');
 
             .menu-item {
 
