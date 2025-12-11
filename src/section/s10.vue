@@ -1,5 +1,6 @@
 <template>
   <article class="s10">
+    <img class="img" src="./s10/img.svg" alt="img" />
     <div class="txt font-['Noto_Serif_TC',serif]">
       <h2>
         <span data-aos="fade-up">安享品味 嚴選國際建材</span>
@@ -10,7 +11,7 @@
       </p>
     </div>
     <div class="pic">
-      <img src="./s10/pic.webp" alt="pic" />
+      <img src="./s10/pic.png" alt="pic" />
     </div>
   </article>
 </template>
@@ -22,21 +23,38 @@
   display: flex;
   flex-wrap: wrap;
   background-color: #E6E6E6;
+  position: relative;
+  /*
+  background: url("./s10/10m.jpg");
+  background-size: 100% auto;
+  */
 
   @media screen and (min-width: 768px) {
     justify-content: center;
-    gap: size(200);
-    padding: size(165);
+    align-items: end;
+    gap: 0;
+    padding: size(270) size(330) size(260) size(60);
+  }
+  .img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+  @media screen and (max-width: 767px) {
+    height: 100vw;
+transform-origin: 100% 0;
+transform: rotate(-90deg) translateY(-100%);
+  }
   }
 
   .txt {
-    padding: sizem(70) sizem(40);
+    padding: sizem(150) sizem(40) sizem(100);
     width: 100%;
     box-sizing: border-box;
 
     @media screen and (min-width: 768px) {
       padding: 0 0 0 size(15);
-      width: size(450);
+      width: size(460);
       order: 2;
     }
 
@@ -48,13 +66,14 @@
         background-image: url(./s3/title_line_m.svg);
         background-size: sizem(290);
         background-repeat: no-repeat;
-        background-position: left center;
+        background-position: 0 0;
         width: 100%;
         height: 100%;
 
         @media screen and (min-width: 768px) {
-          background-image: url(./s3/title_line.svg);
-          background-size: size(400);
+          background-image: url(./s8/title_line.svg);
+          background-size: size(450) auto;
+        background-position: 0 0;
         }
 
         position: absolute;
@@ -63,11 +82,11 @@
       }
 
       font-size: sizem(20);
-      padding-top: sizem(45);
-      padding-left: sizem(10);
+      padding-top: sizem(50);
+      padding-left: sizem(16);
 
       @media screen and (min-width: 768px) {
-        padding-top: size(225);
+        padding-top: size(195);
         padding-left: size(30);
         font-size: size(36);
         margin-bottom: size(20);
@@ -76,7 +95,7 @@
 
     .line {
       display: block;
-      margin-left: sizem(60);
+      margin-left: sizem(100);
       margin-right: auto;
       width: sizem(48);
       margin-top: sizem(10);
@@ -86,6 +105,7 @@
         margin-left: auto;
         width: size(140);
         margin-bottom: size(20);
+      margin-top: 0;
       }
     }
 
@@ -95,11 +115,11 @@
       padding-left: sizem(10);
       padding-right: sizem(10);
       color: #4D4D4D;
+        padding: 0 5.5em 0 1.5em;
 
       @media screen and (min-width: 768px) {
         font-size: size(18);
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0 2.5em 0 1.5em;
       }
     }
   }
@@ -110,7 +130,7 @@
     width: calc(100% - sizem(80));
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: sizem(40);
+    margin-bottom: sizem(45);
 
 
     @media screen and (min-width: 768px) {

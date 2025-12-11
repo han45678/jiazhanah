@@ -1,10 +1,10 @@
 <template>
   <article class="s5">
-    <img class="bg hidden md:block" src="./s5/bg.webp" alt="bg">
-    <img class="bg block md:hidden" src="./s5/bg_m.webp" alt="bg">
+    <img class="bg hidden md:block" src="./s5/bg.jpg" alt="bg">
+    <img class="bg block md:hidden" src="./s5/bgm.jpg" alt="bg">
     <div class="win" data-aos="zoom-in">
-      <img class="win_bg hidden md:block" src="./s5/bg.webp" alt="bg">
-      <img class="win_bg block md:hidden" src="./s5/bg_m.webp" alt="bg">
+      <img class="win_bg hidden md:block" src="./s5/bg.jpg" alt="bg">
+      <img class="win_bg block md:hidden" src="./s5/bgm.jpg" alt="bg">
       <div class="text" data-aos="fade-up">
         <h2 class="font-['Noto_Serif_TC',serif]">
           安<br>
@@ -30,19 +30,33 @@
 .s5 {
   position: relative;
   overflow: hidden;
+  aspect-ratio: 9/16;
+
+  @media screen and (min-width: 768px) {
+    aspect-ratio: 16/9;
+  }
 
   .bg {
     width: 100dvw;
     aspect-ratio: 9/16;
     filter: blur(5px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     @media screen and (min-width: 768px) {
       aspect-ratio: 16/9;
     }
+
+
   }
 
   .win {
     position: absolute;
+    top: 50%;
+    left: 50%;
+
     // width: calc(100% - sizem(70));
     width: sizem(100);
     height: calc(100% - sizem(70));
@@ -61,6 +75,7 @@
     &[data-aos^=zoom][data-aos^=zoom] {
       opacity: 1 !important;
       transition: 2s ease-in-out;
+
       &.aos-animate {
         transform: translate(-50%, -50%) !important;
         width: calc(100% - sizem(70));
@@ -74,7 +89,7 @@
     .text {
       width: 100%;
       height: 100%;
-      border: 1px solid #fff;
+      //   border: 1px solid #fff;
       position: absolute;
       top: 50%;
       left: 50%;

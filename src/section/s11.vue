@@ -1,10 +1,10 @@
 <template>
   <article class="s11">
     <div class="txt font-['Noto_Serif_TC',serif]">
-      <h2><span data-aos="fade-up">安適生活 繁華3大商圈</span></h2>
+      <h2><span data-aos="fade-up">安家推手 幸福成家圓夢</span></h2>
       <img class="line" src="./s3/line.svg" alt="line">
       <p>
-        <span data-aos="fade-up">安和路黃金機能圈，吃喝玩樂全包辦。輕車可達和順、安和路、北安路3大商圈，日常所需盡善盡美。連鎖超市、完善學區、醫療院所通通有，便利生活輕鬆享。</span>
+        <span data-aos="fade-up">佳展建設嚴選潛力地段，讓建築昇華，與土地共映美好生活。構築一棟棟理想寓所，陪伴2000+戶家庭溫馨成家。深耕台南，悉心打造家的經典。</span>
       </p>
     </div>
     <div class="pic">
@@ -63,23 +63,23 @@
 .s11 {
   display: flex;
   flex-wrap: wrap;
-  background-image: url(./s7/bg.png);
+  background-image: url(./s7/bg.jpg);
   background-size: cover;
 
   @media screen and (min-width: 768px) {
     justify-content: center;
-    gap: size(90);
-    padding: size(165) 0 0 size(165);
+    gap: size(80);
+    padding: size(85) 0 0 size(205);
   }
 
   .txt {
-    padding: sizem(70) sizem(40);
+    padding: sizem(70) sizem(40) sizem(40) sizem(40);
     width: 100%;
     box-sizing: border-box;
 
     @media screen and (min-width: 768px) {
-      padding: 0 0 0 size(15);
-      width: size(420);
+      padding: size(150) 0 0 size(15);
+      width: size(450);
       // order: 2;
     }
 
@@ -89,14 +89,14 @@
       &::before {
         content: '';
         background-image: url(./s7/title_line_m.svg);
-        background-size: 100%;
+        background-size: 100% auto;
         background-repeat: no-repeat;
-        background-position: left center;
+        background-position: left top;
         width: 100%;
         height: 100%;
 
         @media screen and (min-width: 768px) {
-          background-image: url(./s7/title_line.svg);
+          background-image: url(./s11/title_line.svg);
         }
 
         position: absolute;
@@ -106,19 +106,21 @@
 
       font-size: sizem(20);
       padding-top: sizem(45);
-      padding-left: sizem(10);
+      padding-right: sizem(16);
+      text-align: right;
 
       @media screen and (min-width: 768px) {
-        padding-top: size(175);
+        padding-top: size(195);
         padding-left: size(30);
         font-size: size(36);
         margin-bottom: size(20);
+      text-align: left;
       }
     }
 
     .line {
       display: block;
-      margin-left: sizem(60);
+      margin-left: sizem(150);
       margin-right: auto;
       width: sizem(48);
       margin-top: sizem(10);
@@ -128,6 +130,7 @@
         margin-left: auto;
         width: size(140);
         margin-bottom: size(20);
+        margin-top: 0;
       }
     }
 
@@ -137,11 +140,11 @@
       padding-left: sizem(10);
       padding-right: sizem(10);
       color: #4D4D4D;
+        padding: 0 1.5em 0 4.5em;
 
       @media screen and (min-width: 768px) {
         font-size: size(18);
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0 1em 0 1.5em;
       }
     }
   }
@@ -157,18 +160,23 @@
 
 
     @media screen and (min-width: 768px) {
-      width: size(1165);
+      width: size(1135);
       margin-bottom: 0
     }
 
     .pic_left {
-      width: sizem(140);
+      width: sizem(130);
       padding-left: sizem(20);
 
+
       @media screen and (min-width: 768px) {
-        width: size(370);
-        padding-left: 0;
-        padding-right: size(24);
+        width: size(280);
+        padding: 0 0 size(70) 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+
       }
 
       .item {
@@ -180,7 +188,7 @@
         }
 
         @media screen and (min-width: 768px) {
-          margin-top: size(40);
+          margin-top: size(35);
         }
 
         img {
@@ -206,7 +214,7 @@
             width: size(36);
             height: size(110);
             font-size: size(20);
-            right: size(-28);
+            right: size(-25);
             top: size(-15);
           }
         }

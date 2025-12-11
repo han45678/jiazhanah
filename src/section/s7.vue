@@ -42,15 +42,15 @@ import 'swiper/css/pagination'
         :navigation="{ nextEl: '.custom-next', prevEl: '.custom-prev' }"
         :pagination="{ el: '.custom-pagination-container', clickable: true }" :loop="true" :autoplay="{ delay: 3000 }">
         <SwiperSlide>
-          <img src="./s7/pic01.webp" alt="pic" />
+          <img src="./s7/pic01.jpg" alt="pic" />
           <div class="caption font-['Noto_Serif_TC',serif]">現場實景修飾圖</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="./s7/pic02.webp" alt="pic" />
+          <img src="./s7/pic02.jpg" alt="pic" />
           <div class="caption font-['Noto_Serif_TC',serif]">現場實景修飾圖</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="./s7/pic03.webp" alt="pic" />
+          <img src="./s7/pic03.jpg" alt="pic" />
           <div class="caption font-['Noto_Serif_TC',serif]">現場實景修飾圖</div>
         </SwiperSlide>
 
@@ -68,12 +68,12 @@ import 'swiper/css/pagination'
 .s7 {
   display: flex;
   flex-wrap: wrap;
-  background-image: url(./s7/bg.png);
+  background-image: url(./s7/bg.jpg);
   background-size: cover;
   @media screen and (min-width: 768px) {
     justify-content: center;
-    gap: size(250);
-    padding: size(165);
+    gap: size(205);
+    padding: size(165) size(165) size(135) size(210);
   }
 
   .txt {
@@ -101,6 +101,7 @@ import 'swiper/css/pagination'
 
         @media screen and (min-width: 768px) {
           background-image: url(./s7/title_line.svg);
+        background-position: left top;
         }
 
         position: absolute;
@@ -110,27 +111,32 @@ import 'swiper/css/pagination'
 
       font-size: sizem(20);
       padding-top: sizem(45);
-      padding-left: sizem(10);
+      padding-left: 0;
+      padding-right: sizem(20);
+      text-align: right;
 
       @media screen and (min-width: 768px) {
-        padding-top: size(175);
+        padding-top: size(185);
         padding-left: size(30);
+      padding-right: 0;
         font-size: size(36);
+      text-align: left;
         margin-bottom: size(20);
       }
     }
 
     .line {
       display: block;
-      margin-left: sizem(60);
+      margin-left: sizem(151);
       margin-right: auto;
       width: sizem(48);
       margin-top: sizem(10);
       margin-bottom: sizem(10);
 
       @media screen and (min-width: 768px) {
-        margin-left: auto;
         width: size(140);
+      margin-top: size(20);
+      margin-left: size(140);
         margin-bottom: size(20);
       }
     }
@@ -138,14 +144,12 @@ import 'swiper/css/pagination'
     p {
       line-height: 1.8;
       font-size: sizem(12);
-      padding-left: sizem(10);
-      padding-right: sizem(10);
       color: #4D4D4D;
+        padding: 0 1.5em 0 4.4em;
 
       @media screen and (min-width: 768px) {
         font-size: size(18);
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0 0 0 1.5em;
       }
     }
   }

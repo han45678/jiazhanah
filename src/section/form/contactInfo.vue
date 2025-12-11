@@ -323,7 +323,7 @@ img{width: 100%;
         &.address {
           // font-size: sizem(15);
           // border-radius: sizem(0) sizem(0) 0 0;
-          border-radius: .5em .5em 0 0;
+       //   border-radius: .5em .5em 0 0;
           padding: 1.1em 0;
           margin-top: sizem(25);
           //font-size: .9em;
@@ -338,11 +338,11 @@ img{width: 100%;
 
         &.address+div {
         //  border-radius: 0 0 sizem(0) sizem(0);
-          border-radius: 0 0 .5em .5em;
+      //    border-radius: 0 0 .5em .5em;
         }
       &.googlemap {
         border-top-width: 0;
-      border-left-width:0;
+      border-left-width:1px;
       }
       }
 

@@ -1,12 +1,13 @@
 <template>
   <article class="s4">
     <div class="pic">
-      <img class="hidden md:block" src="./s4/pic.webp" alt="pic">
-      <img class="block md:hidden" src="./s4/pic_m.webp" alt="pic">
-      <img class="line_m block md:hidden" src="./s4/line_m.svg" alt="line_m">
+      <img src="./s4/pic.jpg" alt="pic">
     </div>
     <div class="text">
-      <img class="bg" src="./s4/line.svg" alt="bg">
+      <div class="bg">
+        <img src="./s4/line.svg" alt="bg" v-if="!isMobile" />
+        <img src="./s4/line_m.svg" alt="bg" v-else>
+      </div>
       <div class="text-content font-['Noto_Serif_TC',serif]" data-aos="fade-up">
         <div class="item">
           <h3>安和大道</h3>
@@ -41,15 +42,10 @@
 
   .pic {
     position: relative;
+
     @media screen and (max-width: 767px) {
-      padding-bottom: sizem(75);
-      .line_m{
-        position: absolute;
-        width: calc(100% - sizem(60));
-        top: sizem(30);
-        left: sizem(30);
-        z-index: 1;
-      }
+      padding-bottom: sizem(95);
+
     }
 
     @media screen and (min-width: 768px) {
@@ -59,6 +55,12 @@
 
     img {
       width: 100%;
+      height: sizem(332);
+      object-fit: cover;
+
+      @media screen and (min-width: 768px) {
+        height: size(1080);
+      }
     }
   }
 
@@ -79,15 +81,52 @@
     }
 
     .bg {
-      display: none;
+      border: 1px solid #3B8281;
+      border-width: 1px 1px 0px 1px;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: sizem(30);
+      left: sizem(30);
+      width:sizem(315);
+      height:sizem(370);
+        @media screen and (min-width: 768px) {
+          border-width: 1px 1px 1px 0px;
+      top: 8%;
+      left: size(140);
+      width:calc(100% - #{size(220)});
+      height: 84%;
+        }
 
-      @media screen and (min-width: 768px) {
-        display: block;
-        width: calc(100% - size(110) - size(110));
+      &::after {
+        content: "";
+        background: #3B8281;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width:sizem(150);
+        height: 1px;
+        @media screen and (min-width: 768px) {
+        left: 0;
+        right: auto;
+        width: 1px;
+        height: size(270);
+
+        }
+      }
+
+      img {
+        position: absolute;
+        width: sizem(150);
+        bottom: 0;
+        left: -1px;
+        transform: translateY(7%);
+        @media screen and (min-width: 768px) {
+        width: size(210);
+        bottom: auto;
+        top: -1px;
+        left: 0;
+        transform: translateX(-13%);
+
+        }
       }
     }
 
@@ -143,7 +182,7 @@
           border-bottom: 2.5px solid #3B8281;
           font-size: sizem(16);
           padding-bottom: sizem(10);
-            margin-bottom: sizem(10);
+          margin-bottom: sizem(10);
 
           @media screen and (min-width: 768px) {
             border-bottom: 4px solid #3B8281;
@@ -172,3 +211,17 @@
   }
 }
 </style>
+
+<script setup>
+import { computed, getCurrentInstance, ref, inject } from 'vue';
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const isMobile = computed(() => globals.$isMobile());
+
+const smoothScroll = inject('smoothScroll')
+const scrollTo = (el) => {
+  smoothScroll({
+    scrollTo: document.querySelector(el)
+  })
+}
+</script>

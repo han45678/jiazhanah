@@ -1,6 +1,6 @@
 <template>
     <div class="house" v-if="info.houseInfos.length > 0">
-        
+
 
         <div class="txt">
             <img class="logo" src="@/section/s1/logo.svg" alt="logo">
@@ -19,7 +19,7 @@
 
         <div class="info">
             <ul>
-                <li v-for="item in info.houseInfos">
+                <li v-for="item in info.houseInfos" :key="item">
                     <p class="font-['Noto_Serif_TC',serif] text-[#fff]" v-html="item[0]"></p>
                     <p class="font-['Noto_Serif_TC',serif] text-[#fff]" v-html="item[1]"></p>
                 </li>
@@ -49,20 +49,19 @@ $house-c2: #000;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 162.5dvh;
-    background: url("@/section/s1/bgm.webp") center;
+    height: sizem(920);
+    background: url("@/section/s1/bg.jpg") center;
     background-size: cover;
     position: relative;
 
     @media screen and (min-width: 768px) {
         height: 100dvh;
-        background-image: url("@/section/s1/bg.webp");
     }
 
     .txt {
         position: absolute;
         padding-right: sizem(160);
-        top: sizem(90);
+        top: sizem(40);
 
         @media screen and (min-width: 768px) {
             padding-right: 0;
@@ -76,7 +75,7 @@ $house-c2: #000;
             max-width: 100%;
 
             &.logo {
-                width: sizem(115);
+                width: sizem(125);
 
                 @media screen and (min-width: 768px) {
                     width: size(300);
@@ -105,7 +104,7 @@ $house-c2: #000;
 
             &.t3 {
                 margin-top: sizem(20);
-                width: sizem(100);
+                width: sizem(120);
 
                 @media screen and (min-width: 768px) {
                     margin-top: size(65);
@@ -133,14 +132,22 @@ $house-c2: #000;
 
         .bg {
             width: auto;
-            height: 100dvh;
+            height: sizem(668);
+            margin-top: sizem(-180);
+
+            @media screen and (min-width: 768px) {
+                
+            height: 100%;
+            margin-top: 0;
+            }
         }
 
         .bird {
             width: 100%;
             position: absolute;
             width: sizem(120);
-            top: sizem(225);
+            top: sizem(95);
+      overflow: hidden;
             right: 18%;
 
             @media screen and (min-width: 768px) {
@@ -154,42 +161,51 @@ $house-c2: #000;
         }
     }
 
-    .info{
+    .info {
         position: absolute;
-        top: 107.5dvh;
-        height: 50dvh;
+        top: 140vw;
+
+        //  height: 50dvh;
         @media screen and (min-width: 768px) {
-        right: size(450);
-        top: size(125);
-        height: auto;
+            right: size(450);
+            top: size(125);
+            height: auto;
         }
-        ul{
-            li{
+
+        ul {
+            li {
                 text-align: left;
                 display: flex;
                 align-items: center;
-                p{
+
+                p {
                     line-height: 2.25;
-                    &:nth-child(1){
+
+                    &:nth-child(1) {
                         font-weight: 600;
                         font-size: sizem(12);
+
                         @media screen and (min-width: 768px) {
                             font-size: size(22);
                         }
-                        &::after{
+
+                        &::after {
                             content: '/';
                             display: inline-block;
                             margin-right: sizem(10);
                             margin-left: sizem(5);
+
                             @media screen and (min-width: 768px) {
-                            margin-right: size(10);
-                            margin-left: size(5);
+                                margin-right: size(10);
+                                margin-left: size(5);
                             }
                         }
                     }
-                    &:nth-child(2){
+
+                    &:nth-child(2) {
                         font-weight: 600;
                         font-size: sizem(16);
+
                         @media screen and (min-width: 768px) {
                             font-size: size(30);
                         }

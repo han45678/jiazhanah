@@ -5,13 +5,24 @@ import { Navigation, Pagination, Autoplay } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import { computed, getCurrentInstance, ref, inject } from 'vue';
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const isMobile = computed(() => globals.$isMobile());
+
+const smoothScroll = inject('smoothScroll')
+const scrollTo = (el) => {
+  smoothScroll({
+    scrollTo: document.querySelector(el)
+  })
+}
 </script>
 
 <template>
   <article class="s6">
     <div class="txt font-['Noto_Serif_TC',serif]">
       <h2>
-        <span data-aos="fade-up">安享便捷 5分鐘北外環道</span>
+        <span data-aos="fade-up">安享便捷<br v-if="isMobile" /> 5分鐘北外環道</span>
       </h2>
       <img class="line" src="./s3/line.svg" alt="line">
       <p>
@@ -42,11 +53,11 @@ import 'swiper/css/pagination'
         :navigation="{ nextEl: '.custom-next', prevEl: '.custom-prev' }"
         :pagination="{ el: '.custom-pagination-container', clickable: true }" :loop="true" :autoplay="{ delay: 3000 }">
         <SwiperSlide>
-          <img src="./s6/pic01.webp" alt="bg" />
+          <img src="./s6/pic01.jpg" alt="bg" />
           <div class="caption font-['Noto_Serif_TC',serif]">現場實景修飾圖</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="./s6/pic02.webp" alt="bg" />
+          <img src="./s6/pic02.jpg" alt="bg" />
           <div class="caption font-['Noto_Serif_TC',serif]">現場實景修飾圖</div>
         </SwiperSlide>
 
@@ -68,18 +79,19 @@ import 'swiper/css/pagination'
 
   @media screen and (min-width: 768px) {
     justify-content: center;
-    gap: size(200);
-    padding: size(165);
+    gap: size(180);
+    padding: size(165) size(195) size(130) size(145);
   }
 
   .txt {
-    padding: sizem(70) sizem(40);
+    padding: sizem(70) sizem(40) sizem(55) sizem(40);
     width: 100%;
     box-sizing: border-box;
 
     @media screen and (min-width: 768px) {
       padding: 0 0 0 size(15);
       width: size(450);
+      margin: size(-20) auto auto auto;
       order: 2;
     }
 
@@ -96,8 +108,9 @@ import 'swiper/css/pagination'
         height: 100%;
 
         @media screen and (min-width: 768px) {
-          background-image: url(./s3/title_line.svg);
-          background-size: size(400);
+          background-image: url(./s6/title_line.svg);
+          background-size: size(420) auto;
+        background-position: left center;
         }
 
         position: absolute;
@@ -106,11 +119,11 @@ import 'swiper/css/pagination'
       }
 
       font-size: sizem(20);
-      padding-top: sizem(45);
-      padding-left: sizem(10);
+      padding-top: sizem(55);
+      padding-left: sizem(16);
 
       @media screen and (min-width: 768px) {
-        padding-top: size(225);
+        padding-top: size(195);
         padding-left: size(30);
         font-size: size(36);
         margin-bottom: size(20);
@@ -128,6 +141,7 @@ import 'swiper/css/pagination'
       @media screen and (min-width: 768px) {
         margin-left: auto;
         width: size(140);
+      margin-top: size(10);
         margin-bottom: size(20);
       }
     }
@@ -135,14 +149,12 @@ import 'swiper/css/pagination'
     p {
       line-height: 1.8;
       font-size: sizem(12);
-      padding-left: sizem(10);
-      padding-right: sizem(10);
       color: #4D4D4D;
+        padding: 0 5.5em 0 1.5em;
 
       @media screen and (min-width: 768px) {
         font-size: size(18);
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0 0 0 2em;
       }
     }
   }

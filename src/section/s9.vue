@@ -1,10 +1,10 @@
 <template>
   <article class="s9">
-    <img class="bg hidden md:block" src="./s9/bg.webp" alt="bg">
-    <img class="bg block md:hidden" src="./s9/bgm.webp" alt="bg">
+    <img class="bg hidden md:block" src="./s9/bg.jpg" alt="bg">
+    <img class="bg block md:hidden" src="./s9/bgm.jpg" alt="bg">
     <div class="win" data-aos="zoom-in">
-      <img class="win_bg hidden md:block" src="./s9/bg.webp" alt="bg">
-      <img class="win_bg block md:hidden" src="./s9/bgm.webp" alt="bg">
+      <img class="win_bg hidden md:block" src="./s9/bg.jpg" alt="bg">
+      <img class="win_bg block md:hidden" src="./s9/bgm.jpg" alt="bg">
       <div class="text" data-aos="fade-up">
         <h2 class="font-['Noto_Serif_TC',serif]">
           安<br>
@@ -32,11 +32,20 @@
 .s9 {
   position: relative;
   overflow: hidden;
+  aspect-ratio: 9/16;
+
+  @media screen and (min-width: 768px) {
+    aspect-ratio: 16/9;
+  }
 
   .bg {
     width: 100dvw;
     aspect-ratio: 9/16;
     filter: blur(5px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     @media screen and (min-width: 768px) {
       aspect-ratio: 16/9;
@@ -63,6 +72,7 @@
     &[data-aos^=zoom][data-aos^=zoom] {
       opacity: 1 !important;
       transition: 2s ease-in-out;
+
       &.aos-animate {
         transform: translate(-50%, -50%) !important;
         width: calc(100% - sizem(70));
@@ -145,17 +155,18 @@
     }
   }
 
-  .caption{
+  .caption {
     color: #fff;
     font-weight: 600;
     font-size: sizem(10);
     bottom: sizem(10);
     right: sizem(10);
     position: absolute;
+
     @media screen and (min-width: 768px) {
       font-size: size(16);
       bottom: size(10);
-      right: size(10 );
+      right: size(10);
     }
   }
 

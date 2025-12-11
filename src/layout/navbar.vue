@@ -7,11 +7,11 @@
             <div class="bar"></div>
         </div>
         <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
-            <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
+            <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>
             <div class="menu-x-btn" @click="menuOpen = !menuOpen">
                 <img src="@/section/menu/x.svg" alt="icon">
-            </div>
-            <template v-for="item, i in info.navList">
+            </div> -->
+            <template v-for="item,  in info.navList" :key="item">
                 <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] "
                     v-bind:class="{ btn2: item.type }"
                     @click="scrollTo(item.target, $isMobile() ? item.offsetmo ? item.offsetmo : item.offset : item.offset)"
@@ -63,7 +63,7 @@
         }
 
         .bar {
-            width: size(41.43);
+            width: size(30);
             height: 3px;
             background-color: currentColor;
             position: relative;
@@ -95,19 +95,9 @@
         }
 
         &:hover {
-            &::after {
-                box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: .1);
-            }
 
             .bar {
-                &::after {
-                    transform: translateX(0%);
-                    box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: .1);
-                }
-
-                &::before {
-                    transform: translateX(0%);
-                }
+                transform: scaleX(1.2);
             }
         }
 
@@ -145,11 +135,14 @@
         justify-content: center;
         align-content: center;
         background-image: url('@/section/menu/bg.png');
-        background-color: #fff;
+       // background-color: #fff;
         background-size: cover;
         background-position: bottom right;
         transform: translateX(100%);
         transition: 0.3s;
+        border-left: 1px solid #C9BC9C80;
+        box-shadow: -4px 0 20px 0 rgba(0, 0, 0, 0.60);
+        backdrop-filter: blur(2px);
         @media screen and (max-width: 767px) {
             width: 100%;
         }
@@ -174,7 +167,7 @@
             line-height: 3;
 
             @media screen and (max-width: 767px) {
-                font-size: sizem(30);
+                font-size: sizem(25);
                 line-height: 2;
             }
 
@@ -435,7 +428,7 @@
                 &::after {
                     content: "";
                     background: #FFF;
-                    height: 2px;
+                    height: 3px;
                     width: 100%;
                     display: block;
                 }

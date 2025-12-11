@@ -12,7 +12,7 @@
       </p>
     </div>
     <div class="_viewbox">
-      <fullview  />
+      <fullview />
     </div>
   </article>
 </template>
@@ -22,17 +22,19 @@
 
 .s3 {
   display: flex;
-flex-wrap: wrap;
+  flex-wrap: wrap;
+
   @media screen and (min-width: 768px) {
     justify-content: center;
-    gap: size(285);
-    padding: size(165);
+    gap: size(265);
+    padding: size(165) size(185) size(165) size(125);
   }
 
   .txt {
-    padding: sizem(70) sizem(40);
+    padding: sizem(70) sizem(40) sizem(55) sizem(40);
     width: 100%;
     box-sizing: border-box;
+    position: relative;
 
     @media screen and (min-width: 768px) {
       padding: 0 0 0 size(15);
@@ -46,9 +48,9 @@ flex-wrap: wrap;
       &::before {
         content: '';
         background-image: url(./s3/title_line_m.svg);
-        background-size: 100%;
+        background-size: 100% auto;
         background-repeat: no-repeat;
-        background-position: left center;
+        background-position: left top;
         width: 100%;
         height: 100%;
 
@@ -62,43 +64,38 @@ flex-wrap: wrap;
       }
 
       font-size: sizem(20);
-      padding-top: sizem(45);
-      padding-left: sizem(10);
+      padding-top: sizem(48);
+      padding-left: sizem(15);
 
       @media screen and (min-width: 768px) {
-        padding-top: size(175);
+        padding-top: size(185);
         padding-left: size(30);
         font-size: size(36);
-        margin-bottom: size(20);
+        margin-bottom: 0;
       }
     }
 
     .line {
       display: block;
-      margin-left: sizem(60);
-      margin-right: auto;
+      margin: sizem(10) auto sizem(10) sizem(72);
       width: sizem(48);
-      margin-top: sizem(10);
-      margin-bottom: sizem(10);
 
       @media screen and (min-width: 768px) {
-        margin-left: auto;
         width: size(140);
-        margin-bottom: size(20);
+        margin: size(20) auto size(20) auto;
       }
     }
 
     p {
       line-height: 1.8;
       font-size: sizem(12);
-      padding-left: sizem(10);
-      padding-right: sizem(10);
+      padding: 0 5.5em 0 1.5em;
       color: #4D4D4D;
 
       @media screen and (min-width: 768px) {
-        font-size: size(18);
-        padding-left: 0;
-        padding-right: 0;
+        font-size: size(19);
+        padding: 0 1em;
+
       }
     }
   }
@@ -106,9 +103,12 @@ flex-wrap: wrap;
   ._viewbox {
     overflow: hidden;
     width: 100%;
+    height: sizem(385);
+
     @media screen and (min-width: 768px) {
       width: size(900);
       order: 1;
+      height: size(745);
     }
   }
 }

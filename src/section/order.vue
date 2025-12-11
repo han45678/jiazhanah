@@ -118,9 +118,9 @@
 
 
   .order-title {
-    font-size: size(40);
+    font-size: size(50);
     font-weight: 600;
-    color: #3D3939 ;
+    color: #3B8281 ;
     padding-top: 1.5em;
 
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -152,7 +152,7 @@
   }
 
   .form {
-    width: size(920);
+    width: size(1100);
     min-width: 750px;
     //  height: 350px;
     gap: size(80);

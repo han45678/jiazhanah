@@ -10,7 +10,7 @@
   </div>
   <!--loading end-->
   <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#e6e6e6] text-[#000]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#e6e6e6] text-[#4D4D4D]">
     <S1 />
     <S2 />
     <S3 />
@@ -49,7 +49,7 @@
 
 .home {
   // background: linear-gradient(to bottom, #009e41 0%, #00a6e9 100%);
-
+text-align: justify;
   &::before {
     content: "";
     //background: url("@/section/s3/1.webp") center;background-size: 100% auto;

@@ -1,6 +1,6 @@
 <template>
     <div class="viewbox" ref="viewbox">
-        <img ref="viewImg" src="@/section/s3/map.webp" alt="" srcset="">
+        <img ref="viewImg" src="@/section/s3/map.png" class="viewboxmap" alt="" srcset="">
         <div class="mask" :class="{ hide: swiped }">
             <img src="@/components/fullview/finger.png" alt="" srcset="">
         </div>
@@ -20,6 +20,12 @@
     img {
         height: 100%;
         max-width: unset;
+
+    }
+    .viewboxmap{
+        background-image: url("@/section/s3/map.jpg");
+        background-size: cover;
+
     }
 }
 
@@ -36,10 +42,11 @@
     pointer-events: none;
     opacity: 1;
     transition: all 1s;
-    background-color: rgba(#000, 0.5);
+    background-color: rgba(#3B8281, 0.4);
 
     img {
         height: 47px;
+    
     }
 
     &.hide {
@@ -55,7 +62,7 @@ import { onMounted, ref } from 'vue';
 const viewbox = ref()
 const viewImg = ref()
 const swiped = ref(false)
-const offsetRatio = 2.85;
+const offsetRatio = 2;
 
 onMounted(() => {
     viewImg.value.addEventListener('load', () => {
