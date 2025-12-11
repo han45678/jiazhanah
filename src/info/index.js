@@ -62,31 +62,31 @@ export default {
         {
             name: '安享便捷',
             target: '.s6',
-            offset: '-60',
+            offset: '0',
             offsetmo: '0'
         },
         {
             name: '安適生活',
             target: '.s5',
-            offset: '-60',
+            offset: '0',
             offsetmo: '0'
         },
         {
             name: '安心學習',
             target: '.s8',
-            offset: '-60',
+            offset: '0',
             offsetmo: '0'
         },
         {
             name: '安享品味',
             target: '.s10',
-            offset: '-60',
+            offset: '0',
             offsetmo: '0'
         },
         {
             name: '安家推手',
             target: '.s11',
-            offset: '-60',
+            offset: '0',
             offsetmo: '0'
         }
     ]

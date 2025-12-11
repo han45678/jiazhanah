@@ -19,7 +19,7 @@
                     <span class="font-['Noto_Serif_TC',serif]">{{ item.name }}</span>
                 </div>
             </template>
-            <div class="close" @click="menuOpen = !menuOpen" v-if="$isMobile()">
+            <div class="close" @click="menuOpen = !menuOpen" >
             </div>
         </div>
     </div>
@@ -226,19 +226,6 @@
             transform: translateX(0);
         }
 
-        .close {
-            position: absolute;
-            top: size(77);
-            left: 50%;
-            transform: translateX(-50%);
-            width: size(44);
-            height: size(44);
-            cursor: pointer;
-
-            img {
-                width: 100%;
-            }
-        }
 
         .decor {
             position: absolute;
@@ -258,6 +245,41 @@
                 }
             }
         }
+        
+            .close {
+                position: absolute;
+                left: unset;
+                bottom: 0;
+                transform: translateX(0);
+                top: size(15);
+                right: size(15);
+                width: size(44);
+                height: size(44);
+                cursor: pointer;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                &::before,
+                &::after {
+                    content: "";
+                    background: #FFF;
+                    height: 3px;
+                    width: 100%;
+                    display: block;
+                }
+
+                &::before {
+                    transform: rotate(45deg);
+                    margin-bottom: -2px;
+                }
+
+                &::after {
+                    transform: rotate(-45deg);
+                }
+            }
 
     }
 }
@@ -409,38 +431,10 @@
             }
 
             .close {
-                position: absolute;
-                left: unset;
-                bottom: 0;
-                transform: translateX(0);
                 top: sizem(10);
                 right: sizem(10);
                 width: sizem(44);
                 height: sizem(44);
-                cursor: pointer;
-                margin: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-                &::before,
-                &::after {
-                    content: "";
-                    background: #FFF;
-                    height: 3px;
-                    width: 100%;
-                    display: block;
-                }
-
-                &::before {
-                    transform: rotate(45deg);
-                    margin-bottom: -2px;
-                }
-
-                &::after {
-                    transform: rotate(-45deg);
-                }
             }
         }
     }

@@ -112,6 +112,7 @@
       @media screen and (min-width: 768px) {
         padding-top: size(195);
         padding-left: size(30);
+      padding-right: 0;
         font-size: size(36);
         margin-bottom: size(20);
       text-align: left;
