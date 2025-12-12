@@ -65,4 +65,4 @@
                 'event_callback': callback
             });
             return false;
-          }</script><script type=module crossorigin src=/assets/index.77155c2c.js></script><link rel=stylesheet href=/assets/index.9ded7d15.css><?php include('head.php'); ?></head><body><div id=app></div></body></html>
+          }</script><script type=module crossorigin src=/assets/index.90108a7c.js></script><link rel=stylesheet href=/assets/index.e5eed07b.css><?php include('head.php'); ?></head><body><div id=app></div></body></html>

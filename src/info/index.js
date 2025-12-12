@@ -5,8 +5,8 @@ export default {
     address1: '接待中心', //按鈕區的--- 如空白會只呈現地址
     address2: '接待中心', //map點下確認的--- 如空白會顯示"導航地址"
     googleSrc:
-        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.4769292962806!2d120.18590139999999!3d23.0062545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7723c77da6b9%3A0x948606cdea29a273!2z5L2z6YuQ6YOhIOaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1764692376149!5m2!1szh-TW!2stw',
-    googleLink: 'https://maps.app.goo.gl/5qWPKRUKT6wnM8aq8',
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.156179302903!2d120.21670199999998!3d23.0547351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e770066e5bc7f%3A0xfcd4753571942f0b!2z5L2z5bGV5a6J5ZKMIOaOpeW-heacg-mkqA!5e0!3m2!1szh-TW!2stw!4v1765511423775!5m2!1szh-TW!2stw',
+    googleLink: 'https://maps.app.goo.gl/ywo7C6gVBNi1dbDd9',
     phone: '(06)262-8888',
     fbLink: 'https://www.facebook.com/61578255539676/',
     fbMessage: 'https://m.me/61578255539676/',

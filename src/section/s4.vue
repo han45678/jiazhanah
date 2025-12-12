@@ -8,24 +8,24 @@
         <img src="./s4/line.svg" alt="bg" v-if="!isMobile" />
         <img src="./s4/line_m.svg" alt="bg" v-else>
       </div>
-      <div class="text-content font-['Noto_Serif_TC',serif]" data-aos="fade-up">
-        <div class="item">
+      <div class="text-content font-['Noto_Serif_TC',serif]">
+        <div class="item"  data-aos="zoom-in" data-aos-delay="0">
           <h3>安和大道</h3>
           <p>核心居域享繁華</p>
         </div>
-        <div class="item">
+        <div class="item" data-aos="zoom-in" data-aos-delay="200">
           <h3>輕鬆成家</h3>
           <p>市心甜蜜<span>2</span>字頭</p>
         </div>
-        <div class="item">
+        <div class="item" data-aos="zoom-in" data-aos-delay="400">
           <h3>直抵南科</h3>
           <p><span>5</span>分鐘北外環道</p>
         </div>
-        <div class="item">
+        <div class="item" data-aos="zoom-in" data-aos-delay="600">
           <h3>學習贏家</h3>
           <p>住近資優文教區</p>
         </div>
-        <div class="item">
+        <div class="item" data-aos="zoom-in" data-aos-delay="800">
           <h3>書香社區</h3>
           <p>日系書屋選冊宅</p>
         </div>
