@@ -1,7 +1,7 @@
 const caseName = '佳展建設';
 export default {
     caseid: '91184de3-cfb1-4bcc-8ca2-d91ef7142c5b',
-    address:'台南市北區中華西路二段857號',
+    address:'臺南市安南區台江大道一段827號',
     address1: '接待中心', //按鈕區的--- 如空白會只呈現地址
     address2: '接待中心', //map點下確認的--- 如空白會顯示"導航地址"
     googleSrc:

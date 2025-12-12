@@ -182,6 +182,8 @@ img{width: 100%;
         z-index: 0;
         position: relative;
         flex:2.17;
+      cursor: context-menu;
+        
         // border-radius: 999px 0 0 999px;
       //  max-width: 9999px;
         justify-content: center;
@@ -199,7 +201,12 @@ img{width: 100%;
           text-indent:0em;
           white-space: normal;
           padding: 0 1em;
-        }
+        } 
+        &:hover {
+        background: transparent;
+        color: #333;
+
+      }
       }
 
 
